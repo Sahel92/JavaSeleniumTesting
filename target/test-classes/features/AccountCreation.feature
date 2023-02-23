@@ -1,4 +1,4 @@
-@accountCreation
+
 Feature: User wants to create account
 
   Background: 
@@ -13,9 +13,9 @@ Feature: User wants to create account
 
     Examples: 
       | name      | email                         | password   | confirmPassword |
-      | SpongeBob | Spa4sfigeBobss46@tekschool.us | Test12345$ | Test12345$      |
-      | Patrick   | Piq4fasfwes6546@tekschool.us  | Test12345$ | Test12345$      |
-    #  | SpongeBob | SpongeBobs46@tekschool.us | Test12345$ | Test12345$      |
-   #   | Patrick | Patricks6546@tekschool.us | Test12345$ | Test12345$      |
-   #| Patrick | Patrickss6546@tekschool.us | Test12345$ | Test12345$      |
-  # | SpongeBob | SpongeBobss46@tekschool.us | Test12345$ | Test12345$      |
+      | SpongeBob | r13tz36@tekschool.us | Test12345$ | Test12345$      |
+      | Patrick   | tw212qdbdf6546@tekschool.us  | Test12345$ | Test12345$      |
+     #| SpongeBob | SpongeBobs46@tekschool.us | Test12345$ | Test12345$      |
+     #| Patrick | Patricks6546@tekschool.us | Test12345$ | Test12345$      |
+     #| Patrick | Patrickss6546@tekschool.us | Test12345$ | Test12345$      |
+     #| SpongeBob | SpongeBobss46@tekschool.us | Test12345$ | Test12345$      |

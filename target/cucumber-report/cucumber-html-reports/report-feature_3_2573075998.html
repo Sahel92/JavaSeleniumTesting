@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Tag: @test</title>
+<title>Cucumber Reports (no 1) - Feature: Sign In Feature</title>
 
 </head>
 <body>
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Tag Report</h2>
+    <h2>Feature Report</h2>
   </div>
 </div>
 
@@ -108,7 +108,7 @@ $(document).ready(function() {
     <th colspan="2">Features</th>
   </tr>
   <tr>
-    <th>Tag</th>
+    <th>Feature</th>
     <th class="passed">Passed</th>
     <th class="failed">Failed</th>
     <th class="skipped">Skipped</th>
@@ -128,19 +128,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@test</td>
-          <td      class="passed"    >3</td>
+          <td class="tagname">Sign In Feature</td>
+          <td      class="passed"    >5</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">3</td>
+          <td class="total">5</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="175983600">0.175</td>
+          <td class="duration" data-value="644482400">0.644</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -167,30 +167,38 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="elements">
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_2106088222.html">User able to edit their debit/credit information.</a>
-    </div>
-
+      <div class="feature">
 
 <div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2210145489.html">@test</a>
 </div>
 
 
-  <span class="lead-duration duration">0.175</span>
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Sign In Feature</span>
+
+
+</div>
+
+        <div class="description indention">  User wants to sign into account</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.058</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Verify user can remove their debit/credit card</span>
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -202,8 +210,116 @@ $(document).ready(function() {
   <div id="element-1" class="collapse collapsable-details ">
 
 
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User is on retail website</span>
+
+  <span class="lead-duration duration">0.024</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User clicks on Sign in option</span>
+
+  <span class="lead-duration duration">0.033</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.586</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify user can sign into Retail Application</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+
+
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-4">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -215,13 +331,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-2" class="inner-level collapse collapsable-details ">
+    <div id="before-4" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">tek.sdet.framework.base.BaseUITest.setupTests()</span>
 
-  <span class="lead-duration duration">3.809</span>
+  <span class="lead-duration duration">3.615</span>
 
           </div>
 
@@ -238,7 +354,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -250,15 +366,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User click on bank card</span>
+  <span class="name">User enters <span class="argument">&quot;billybob123@tekschool.us&quot;</span> and <span class="argument">&quot;Pizza123$&quot;</span></span>
 
-  <span class="lead-duration duration">0.135</span>
+  <span class="lead-duration duration">0.108</span>
 
 </div>
 
@@ -283,9 +399,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User click on remove option of card section</span>
+  <span class="name">User clicks on login button</span>
 
-  <span class="lead-duration duration">0.033</span>
+  <span class="lead-duration duration">0.035</span>
 
 </div>
 
@@ -310,9 +426,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">payment details should be removed</span>
+  <span class="name">User should be logged into their account</span>
 
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.441</span>
 
 </div>
 
@@ -339,7 +455,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -351,13 +467,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-6" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">tek.sdet.framework.base.BaseUITest.closeTests(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.119</span>
+  <span class="lead-duration duration">0.093</span>
 
           </div>
 
@@ -374,6 +490,7 @@ $(document).ready(function() {
   </div>
 </div>
 
+        </div>
 
       </div>
     </div>

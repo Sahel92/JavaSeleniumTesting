@@ -81,8 +81,8 @@ public class EditPaymentCard extends CommonUtility {
 		
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
-		Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().visaCard));
-		logger.info("payment details was removed");
+		Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().visaCard));
+		logger.info("card removed from account");
 	}
 	
 }

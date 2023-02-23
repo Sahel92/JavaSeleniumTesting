@@ -1,5 +1,4 @@
 
-@addPayment
 Feature: User can add  payment  method
 
   Background: 
@@ -7,7 +6,7 @@ Feature: User can add  payment  method
     When User clicks on Sign in option
     And User enters following login credentials:
       | Email                    | Password    |
-      | billybob123@tekschool.us | Burgers123$ |
+      | billybob123@tekschool.us | Pizza123$ |
     And User clicks on login button
     Then User should be logged into their account
     When User click on Account option

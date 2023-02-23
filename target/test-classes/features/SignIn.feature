@@ -1,4 +1,4 @@
-@singIn
+
 Feature: Sign In Feature
   User wants to sign into account
 
@@ -14,5 +14,5 @@ Feature: Sign In Feature
 
     Examples: 
       | email                         | password   |  
-      | billybob123@tekschool.us      | Burgers123$  |  
-      | peterGriffin6546@tekschool.us | Test12345$ |  
+      | billybob123@tekschool.us      | Pizza123$  |  
+     # | peterGriffin6546@tekschool.us | Test12345$ |  

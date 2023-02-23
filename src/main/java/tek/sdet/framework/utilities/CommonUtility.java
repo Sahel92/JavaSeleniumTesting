@@ -292,7 +292,17 @@ public class CommonUtility extends BaseSetup {
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
 	
+// clear text using JS
+	public void clearTextWithJS(WebElement element) {
+		JavascriptExecutor js = ((JavascriptExecutor)getDriver());
+		js.executeScript("arguments[0].clearText();", element);
+	}
 	
-
+// clear text
+	public void clearText(WebElement element) {
+		waitTillClickable(element).clear();
 }
-
+	public void clearText(By by) {
+		waitTillClickable(by).clear();
+}
+}
