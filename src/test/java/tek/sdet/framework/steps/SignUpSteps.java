@@ -9,19 +9,19 @@ import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 
 public class SignUpSteps extends CommonUtility {
-	
+
 	private POMFactory factory = new POMFactory();
-	
+
 	@When("User clicks on Create New Accout button")
 	public void user_click_on_create_new_accout_button() {
 		click(factory.getRetailSignInPage().createAccountBtn);
 	    Assert.assertTrue(isElementDisplayed(factory.getSignUpPage().signUpForm));
-	    logger.info("Sign up form is displayed");	    
+	    logger.info("Sign up form is displayed");
 	    Assert.assertTrue(isElementDisplayed(factory.getRetailSignInPage().emailLabel));
 	    logger.info("Email label is displayed");
 	    Assert.assertTrue(isElementDisplayed(factory.getSignUpPage().confirmPasswordLabel));
 	    logger.info("Confirm password label is displayed");
-	   	    
+
 	}
 
 	@And("User fills the signUp form with {string} {string} {string} {string}")
@@ -34,7 +34,7 @@ public class SignUpSteps extends CommonUtility {
 	    logger.info("Password entered");
 	    sendText(factory.getSignUpPage().confirmPasswordInput, string4);
 	    logger.info("Confirm Password entered");
-    
+
 	}
 
 	@And("User click on SignUp button")

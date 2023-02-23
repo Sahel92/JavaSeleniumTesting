@@ -1,10 +1,10 @@
-
+@regression
 Feature: User can add  payment  method
 
   Background: 
     Given User is on retail website
     When User clicks on Sign in option
-    And User enters following login credentials:
+    And User enters following login credentials 
       | Email                    | Password    |
       | billybob123@tekschool.us | Pizza123$ |
     And User clicks on login button
@@ -21,5 +21,4 @@ Feature: User can add  payment  method
     Examples: 
       | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
       | 8387956115160064 | Mario      |               4 |           2039 |          745 |
-      | 2222256515160064 | Luigi      |               7 |           2027 |          007 |
-      | 1111956545990064 | Yoshi      |               9 |           2025 |          781 |
+

@@ -2,7 +2,9 @@ package tek.sdet.framework.steps;
 
 import java.util.List;
 import java.util.Map;
+
 import org.junit.Assert;
+
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,12 +21,12 @@ public class EditPaymentCard extends CommonUtility {
 		logger.info("User opened Card options. Edit card form displayed");
 		click((factory.getRetailAccountPage().editCardBtn));
 		logger.info("User clicked on edit button");
-		
+
 	}
 
 	@When("User edits card information")
 	public void userEditsInformationWithBelowData(DataTable cardUpdate) {
-		
+
 		List<Map<String, String>> cardInfo = cardUpdate.asMaps(String.class, String.class);
 
 		String cardNumber = cardInfo.get(0).get("cardNumber");
@@ -71,18 +73,18 @@ public class EditPaymentCard extends CommonUtility {
 	    clickElementWithJS(factory.getRetailAccountPage().visaCard);
 	    logger.info("user clicked on visa card");
 	}
-	
+
 	@When("User click on remove option of card section")
 	public void userClickOnRemoveOptionOfCardSection(){
 
 		click(factory.getRetailAccountPage().removeCardBtn);
 		logger.info("User clicked on remove option of card section");
 	}
-		
+
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
 		Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().visaCard));
 		logger.info("card removed from account");
 	}
-	
+
 }

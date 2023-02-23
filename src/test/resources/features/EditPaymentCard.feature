@@ -1,11 +1,11 @@
-
+@regression
 Feature: User able to edit their debit/credit information. 
   
 
  Background: 
     Given User is on retail website
     When User clicks on Sign in option
-    And User enters following login credentials:
+    And User enters following login credentials 
       | Email                    | Password    |
       | billybob123@tekschool.us | Pizza123$ |
     And User clicks on login button

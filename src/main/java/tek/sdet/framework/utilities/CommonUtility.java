@@ -1,8 +1,8 @@
 package tek.sdet.framework.utilities;
 
-
 import java.time.Duration;
 import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -18,7 +18,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 import tek.sdet.framework.base.BaseSetup;
 
@@ -291,18 +290,20 @@ public class CommonUtility extends BaseSetup {
 		JavascriptExecutor js = ((JavascriptExecutor) getDriver());
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
-	
+
 // clear text using JS
 	public void clearTextWithJS(WebElement element) {
-		JavascriptExecutor js = ((JavascriptExecutor)getDriver());
-		js.executeScript("arguments[0].clearText();", element);
+		JavascriptExecutor js = ((JavascriptExecutor) getDriver());
+		js.executeScript("arguments[0].value = '';", element);
 	}
-	
-// clear text
-	public void clearText(WebElement element) {
-		waitTillClickable(element).clear();
-}
-	public void clearText(By by) {
-		waitTillClickable(by).clear();
-}
+
+	// clear and send text with JavaScript
+
+	public void clearAndSendWithJs(WebElement element, String value) {
+		JavascriptExecutor js = ((JavascriptExecutor) getDriver());
+		js.executeScript("arguments[0].value= '';", element);
+		element.sendKeys(value);
+
+	}
+
 }

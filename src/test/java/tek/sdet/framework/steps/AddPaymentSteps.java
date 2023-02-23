@@ -8,10 +8,10 @@ import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 
 public class AddPaymentSteps extends CommonUtility  {
-	
+
 	private POMFactory factory = new POMFactory();
-	
-	
+
+
 @When("User click on Add a payment method link")
 public void user_click_on_add_a_payment_method_link() {
     Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().addPaymentLink));
@@ -48,7 +48,7 @@ public void a_message_should_be_displayed(String string) {
     String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().paymentAddedSuccess));
     String expectedMessage = string;
     Assert.assertEquals(expectedMessage, actualMessage);
-    logger.info("Actual:" + actualMessage + " matches Expected " + expectedMessage );    
+    logger.info("Actual:" + actualMessage + " matches Expected " + expectedMessage );
 }
 
 }

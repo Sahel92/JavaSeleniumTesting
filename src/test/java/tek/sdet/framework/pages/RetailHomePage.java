@@ -32,13 +32,13 @@ public class RetailHomePage extends BaseSetup {
 
 	@FindBy(xpath = "//a[text() = 'TEKSCHOOL']")
 	public WebElement tekSchoolLogo;
-	
+
 	@FindBy(id = "logoutBtn")
 	public WebElement logoutBtn;
-	
+
 	@FindBy(id = "orderLink")
 	public WebElement orderLink;
-	
+
 	@FindBy(id = "accountLink")
 	public WebElement accountLink;
 }

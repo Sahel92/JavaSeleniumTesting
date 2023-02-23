@@ -9,7 +9,7 @@ import tek.sdet.framework.base.BaseSetup;
  * POM factory class for the sign up page (Account Creation)
  */
 public class SignUpPage extends BaseSetup{
-	
+
 	public SignUpPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
@@ -28,7 +28,7 @@ public WebElement passwordInput;
 
 /*
  * can use this for RetailAccount Page tests
-	
+
  */
 @FindBy(id = "confirmPasswordInput")
 public WebElement confirmPasswordInput;

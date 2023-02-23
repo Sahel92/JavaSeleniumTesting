@@ -1,4 +1,4 @@
-
+@regression
 
 Feature: User can update password
 
@@ -10,7 +10,7 @@ Background:
     
     Scenario Outline: Verify that user can update password
     
-    And User enters following login credentials:
+    And User enters following login credentials 
     | Email                   	|      Password			|
     | Patrickss6546@tekschool.us	|    	Test12345$	|
    

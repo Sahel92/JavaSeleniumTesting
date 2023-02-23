@@ -11,7 +11,7 @@ import tek.sdet.framework.utilities.CommonUtility;
 public class ChangePasswordSteps extends CommonUtility {
 
 	private POMFactory factory = new POMFactory();
-	
+
 	@And("User enters {string} {string} {string}")
 	public void userEnters(String string, String string2, String string3) {
 	    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().previousPasswordInput));
@@ -22,8 +22,8 @@ public class ChangePasswordSteps extends CommonUtility {
 	    logger.info("previous password is entered");
 	    logger.info("New password is entered");
 	    logger.info("Confirm password is entered");
-	    
-	    
+
+
 	}
 
 	@When("User click on Change Password button")
@@ -40,5 +40,5 @@ public class ChangePasswordSteps extends CommonUtility {
 	    Assert.assertEquals(actualMessage, expectedMessage);
 	    logger.info("Password updated successfully");
 	}
-	
+
 }

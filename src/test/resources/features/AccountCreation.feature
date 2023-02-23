@@ -1,4 +1,4 @@
-
+@regression
 Feature: User wants to create account
 
   Background: 
