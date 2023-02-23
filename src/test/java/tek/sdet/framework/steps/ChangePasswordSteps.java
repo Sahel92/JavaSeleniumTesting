@@ -13,7 +13,7 @@ public class ChangePasswordSteps extends CommonUtility {
 	private POMFactory factory = new POMFactory();
 	
 	@And("User enters {string} {string} {string}")
-	public void user_enters(String string, String string2, String string3) {
+	public void userEnters(String string, String string2, String string3) {
 	    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().previousPasswordInput));
 	    logger.info("Previous password text is present");
 	    sendText(factory.getRetailAccountPage().previousPasswordInput, string);

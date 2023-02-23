@@ -40,7 +40,7 @@ public void user_click_on_add_your_card_button() {
     Assert.assertTrue(isElementEnabled(factory.getRetailAccountPage().paymentSubmitBtn));
     logger.info("Add your card button is enabled");
     click(factory.getRetailAccountPage().paymentSubmitBtn);
-    logger.info("User clicked Add You card button");
+    logger.info("User clicked on Add Your card button");
 }
 
 @Then("a message should be displayed {string}")
@@ -48,7 +48,7 @@ public void a_message_should_be_displayed(String string) {
     String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().paymentAddedSuccess));
     String expectedMessage = string;
     Assert.assertEquals(expectedMessage, actualMessage);
-    logger.info("Payment added successfully");    
+    logger.info("Actual:" + actualMessage + " matches Expected " + expectedMessage );    
 }
 
 }

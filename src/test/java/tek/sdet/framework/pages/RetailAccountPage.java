@@ -51,7 +51,7 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(xpath = "//div[text() = 'Password Updated Successfully']")
 	public WebElement passwordUpdatedSuccessfully;
 	
-	@FindBy(xpath = "//div[contains(text(), 'Payment Method updated Successfully']")
+	@FindBy(xpath = "//div[text() = 'Payment Method added sucessfully']")
 	public WebElement paymentAddedSuccess;
 	
 	@FindBy(xpath ="//*[text() ='Payment Method updated Successfully']")
@@ -88,7 +88,7 @@ public class RetailAccountPage extends BaseSetup {
 	 
 
 	// WebElements related to Buttons
-	// (update, change password, edit, etc) buttons
+	// (update, change password, edit)
 	
 	@FindBy(id = "paymentSubmitBtn")
 	public WebElement paymentSubmitBtn;
@@ -96,15 +96,26 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(xpath = "//button[text() ='Edit']")
 	public WebElement editCardBtn;
 	
-	@FindBy(xpath = "//button[text() ='remove']")
+	@FindBy(xpath="//button[contains(text(),'remove')]")
 	public WebElement removeCardBtn;
 	
 	@FindBy(id = "credentialsSubmitBtn")
 	public WebElement changePasswordBtn;
 	
 	//This element when clicked on will present the options to edit or remove card.
-		@FindBy(className = "account__payment-sub")
-		public WebElement cardOptions;
+//		@FindBy(className = "false account__payment-item")
+//		public WebElement cardOptions;
 	
 	// End buttons
+		
+		/*
+		 * wallet webelements 
+		 * cards on file list
+		 */
+		
+@FindBy(className = "account__payments-wrapper")
+public WebElement cardsOnAccount;
+
+@FindBy(xpath = "//img[@alt = 'Master Card']")
+public WebElement visaCard;
 }

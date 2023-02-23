@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                4,
-                1,
-                5,
+                8,
+                0,
+                0,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
-                1
+                1,
+                0
             ],
             backgroundColor: [
                 "#00B000",
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   0,
-                   1
+                   1,
+                   0
                ],
                backgroundColor: [
                 "#00B000",
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>18 Feb 2023, 20:04</td>
+      <td>21 Feb 2023, 21:26</td>
     </tr>
   </tbody>
 </table>
@@ -325,54 +325,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_2106088222.html">User able to edit their debit/credit information.</a></td>
+        <td class="tagname"><a href="report-feature_1148246928.html">User able to remove a card on file.</a></td>
 
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >5</td>
+        <td      class="passed"    >8</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">10</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
 
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="20320564200">20.320</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="1164247200">1.164</td>
+        <td class="passed">Passed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>4</td>
-      <td>1</td>
-      <td>5</td>
+      <td>8</td>
       <td>0</td>
       <td>0</td>
-      <td>10</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8</td>
 
+      <td>1</td>
       <td>0</td>
       <td>1</td>
-      <td>1</td>
 
-      <td class="duration">20.320</td>
+      <td class="duration">1.164</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>40.00%</td>
-      <td>10.00%</td>
-      <td>50.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td></td>
-      <td>0.00%</td>
       <td>100.00%</td>
-      <td></td>
-      <td></td>
       <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>
