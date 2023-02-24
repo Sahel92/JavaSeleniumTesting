@@ -84,11 +84,26 @@ public class AddressFeaturesSteps extends CommonUtility {
 	}
 
 	@Then("A confirmation message should be displayed {string}")
-	public void a_confirmation_message_should_be_displayed(String string) {
+	public void aConfirmationMessageShouldBeDisplayed(String string) {
 	    String actualText = getText(waitTillPresence(factory.getRetailAccountPage().updateAddressConfirm));
 	    String expectedText = string; 
 	    Assert.assertEquals(expectedText,actualText);
 	}
+	
+	
+	@When("User click on remove option of Address section")
+	public void userClickOnRemoveOptionOfAddressSection() {
+	    click(factory.getRetailAccountPage().removeBtn);
+	    logger.info("User clicked on remove button for their second address" );
+	}
+	@Then("Address details should be removed")
+	public void addressDetailsShouldBeRemoved() {
+	    Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().removeBtn));
+	    logger.info("Users second address has been removed");	    
+	}
+	
+	
+	
 	
 	
 	

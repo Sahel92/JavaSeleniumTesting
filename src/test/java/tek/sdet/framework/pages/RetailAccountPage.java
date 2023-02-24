@@ -157,5 +157,7 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(id = "addressBtn")
 	public WebElement updateAddressBtn;
 	
+	@FindBy(xpath ="(//button[contains(text(),'Remove')])[2]")
+	public WebElement removeBtn;
 	
 }

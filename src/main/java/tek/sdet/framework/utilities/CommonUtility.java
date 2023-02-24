@@ -297,7 +297,7 @@ public class CommonUtility extends BaseSetup {
 		js.executeScript("arguments[0].value = '';", element);
 	}
 
-	// clear and send text with JavaScript
+// clear and send text with JavaScript
 
 	public void clearAndSendWithJs(WebElement element, String value) {
 		JavascriptExecutor js = ((JavascriptExecutor) getDriver());
@@ -305,5 +305,7 @@ public class CommonUtility extends BaseSetup {
 		element.sendKeys(value);
 
 	}
+	
+	
 
 }
