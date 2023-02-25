@@ -37,7 +37,7 @@ public class SignUpSteps extends CommonUtility {
 
 	}
 
-	@And("User click on SignUp button")
+	@When("User click on SignUp button")
 	public void user_click_on_sign_up_button() {
 		Assert.assertTrue(isElementEnabled(factory.getSignUpPage().signupBtn));
 		 logger.info("Sign Up button is enabled");

@@ -25,7 +25,7 @@ Feature: User able to edit their debit/credit information.
   And User clicks on Update Your Card button
   Then Update successfull message should be displayed 'Payment Method updated Successfully'
   
-  @test
+ 
   Scenario: Verify user can remove their debit/credit card
    And User click on bank card
   And User click on remove option of card section

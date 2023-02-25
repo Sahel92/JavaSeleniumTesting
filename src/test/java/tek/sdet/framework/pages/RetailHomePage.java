@@ -15,18 +15,15 @@ public class RetailHomePage extends BaseSetup {
 	}
 
 	/*
-	 * Access modifier public because we will use
-	 * POMFactory constructor to instantiate single instance
-	 * of this class.
-	 * With public modifier can use this webElement
-	 * in many different test cases
-	 * For example if testing the RetailSignInPage and if I want to verify that
-	 * that the signInBtn is present I can use the bellow element
-	 * without having to create the same method in a different POM class.
-	 * Thank You ENCAPSULATION!!!
+	 * Access modifier public because we will use POMFactory constructor to
+	 * instantiate single instance of this class. With public modifier can use this
+	 * webElement in many different test cases For example if testing the
+	 * RetailSignInPage and if I want to verify that that the signInBtn is present I
+	 * can use the bellow element without having to create the same method in a
+	 * different POM class. Thank You ENCAPSULATION!!!
 	 */
 
-	@FindBy(id ="signinLink")
+	@FindBy(id = "signinLink")
 	public WebElement signInLink;
 
 	@FindBy(tagName = "React App")
@@ -43,25 +40,68 @@ public class RetailHomePage extends BaseSetup {
 
 	@FindBy(id = "accountLink")
 	public WebElement accountLink;
-	
+
 	@FindBy(css = "#hamburgerBtn")
 	public WebElement allBtn;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Electronics')]")
 	public WebElement electronicsDept;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'ers')]")
 	public WebElement computersDept;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Smart Home')]")
 	public WebElement smartHome;
-	
-	
+
 	@FindBy(xpath = "//div[@class ='sidebar_content-item']/span")
 	public List<WebElement> sidebarOptions;
-	
+
 	@FindBy(xpath = "//div[@class ='sidebar_content-item']/span")
 	public List<WebElement> deptSubOptions;
+
+	@FindBy(xpath = "//select[@id='search']//option")
+	public List<WebElement> deptSelect;
+
+	@FindBy(id = "searchInput")
+	public WebElement searchBox;
+
+	@FindBy(id = "searchBtn")
+	public WebElement searchBtn;
+
+	@FindBy(xpath = "//img[@alt = 'Kasa Outdoor Smart Plug']")
+	public WebElement kasaPlug;
+
+	@FindBy(xpath = "//select[@class = 'product__select']")
+	public WebElement quantitySelection;
+
+	@FindBy(id = "addToCartBtn")
+	public WebElement addToCartBtn;
+
+	@FindBy(id = "cartBtn")
+	public WebElement cartBtn;
+
+	@FindBy(xpath = "//span[@id='cartQuantity']")
+	public WebElement cartQnty;
+
+	@FindBy(xpath = "//option[contains(text(),'Smart Home')]")
+	public WebElement smartHomeDept;
+
+	@FindBy(id = "proceedBtn")
+	public WebElement proceedBtn;
+
+	@FindBy(css = "#addAddressBtn")
+	public WebElement addAddressBtn;
+
+	@FindBy(id = "addPaymentBtn")
+	public WebElement addPaymentBtn;
+
+	@FindBy(id = "placeOrderBtn")
+	public WebElement placeOrderBtn;
+
+	@FindBy(xpath = "//div[contains(text(),'Order Placed Successfully')]")
+	public WebElement   orderPlacedText;
+	
+	
 	
 	
 }

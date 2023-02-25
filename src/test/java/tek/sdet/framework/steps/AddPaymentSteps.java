@@ -13,7 +13,7 @@ public class AddPaymentSteps extends CommonUtility  {
 
 
 @When("User click on Add a payment method link")
-public void user_click_on_add_a_payment_method_link() {
+public void userClickOnAddAPaymentMethodLink() {
     Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().addPaymentLink));
     logger.info("Add a payment link is displayed");
     click(factory.getRetailAccountPage().addPaymentLink);
@@ -21,7 +21,7 @@ public void user_click_on_add_a_payment_method_link() {
 }
 
 @When("User fills debit or credit card information {string} {string} {string} {string} {string}")
-public void user_fills_debit_or_credit_card_information(String string, String string2, String string3, String string4, String string5) {
+public void userFillsDebitOrCreditCardInformation(String string, String string2, String string3, String string4, String string5) {
     Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().cardNumberInput));
     Assert.assertTrue(isElementEnabled(factory.getRetailAccountPage().expirationMonthInput));
     logger.info("Card number field is present");
@@ -36,7 +36,7 @@ public void user_fills_debit_or_credit_card_information(String string, String st
 }
 
 @When("User click on Add your card button")
-public void user_click_on_add_your_card_button() {
+public void userClickOnAddYourCardButton() {
     Assert.assertTrue(isElementEnabled(factory.getRetailAccountPage().paymentSubmitBtn));
     logger.info("Add your card button is enabled");
     click(factory.getRetailAccountPage().paymentSubmitBtn);
@@ -44,7 +44,7 @@ public void user_click_on_add_your_card_button() {
 }
 
 @Then("a message should be displayed {string}")
-public void a_message_should_be_displayed(String string) {
+public void aMessageShouldBeDisplayed(String string) {
     String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().paymentAddedSuccess));
     String expectedMessage = string;
     Assert.assertEquals(expectedMessage, actualMessage);
