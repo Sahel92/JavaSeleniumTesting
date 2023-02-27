@@ -13,13 +13,13 @@ public class BaseUITest extends CommonUtility {
 		super.setupBrowser();
 	}
 
-// NOT EFFICIENT TO TAKE SCREENSHOT AFTER EVERY STEP.
-	@AfterStep
-	public void takeScreenshot(Scenario scenario) {
-		byte[] screenshot = takeScreenShotAsBytes();
-
-	scenario.attach(screenshot, "image/png", "Screenshot");
-	}
+// NOT EFFICIENT TO TAKE SCREENSHOT AFTER EVERY STEP. Good for debugging purposes
+//	@AfterStep
+//	public void takeScreenshot(Scenario scenario) {
+//		byte[] screenshot = takeScreenShotAsBytes();
+//
+//	scenario.attach(screenshot, "image/png", "Screenshot");
+//	}
 
 
 
