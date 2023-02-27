@@ -1,4 +1,4 @@
-@regression
+@smoke
 Feature: User wants to create account
 
   Background: 

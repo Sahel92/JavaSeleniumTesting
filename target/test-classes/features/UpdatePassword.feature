@@ -1,4 +1,4 @@
-@regression
+@smoke
 Feature: User can update password
 
   Background: 
