@@ -59,8 +59,8 @@ public class RetailHomePage extends BaseSetup {
 	@FindBy(xpath = "//div[@class ='sidebar_content-item']/span")
 	public List<WebElement> deptSubOptions;
 
-	@FindBy(xpath = "//select[@id='search']//option")
-	public List<WebElement> deptSelect;
+	@FindBy(xpath = "//select[@id='search']")
+	public WebElement deptSelect;
 
 	@FindBy(id = "searchInput")
 	public WebElement searchBox;
@@ -68,8 +68,8 @@ public class RetailHomePage extends BaseSetup {
 	@FindBy(id = "searchBtn")
 	public WebElement searchBtn;
 
-	@FindBy(xpath = "//img[@alt = 'Kasa Outdoor Smart Plug']")
-	public WebElement kasaPlug;
+	@FindBy(xpath = "//img[@class='image']")
+	public WebElement itemImg;
 
 	@FindBy(xpath = "//select[@class = 'product__select']")
 	public WebElement quantitySelection;
@@ -99,8 +99,10 @@ public class RetailHomePage extends BaseSetup {
 	public WebElement placeOrderBtn;
 
 	@FindBy(xpath = "//div[contains(text(),'Order Placed Successfully')]")
-	public WebElement   orderPlacedText;
+	public WebElement   orderSucessfullText;
 	
+@FindBy(xpath = "//p[contains(text(),'Order Placed, Thanks')]")
+public WebElement orderPlaced;
 	
 	
 	

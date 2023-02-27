@@ -8,7 +8,6 @@ tek\sdet\framework\steps\ChangePasswordSteps.class
 tek\sdet\framework\steps\SignUpSteps.class
 tek\sdet\framework\pages\POMFactory.class
 tek\sdet\framework\runner\TestRunner.class
-tek\sdet\framework\steps\EditPaymentCard.class
 tek\sdet\framework\pages\RetailHomePage.class
 tek\sdet\framework\steps\AddPaymentSteps.class
 tek\sdet\framework\steps\SignInSteps.class

@@ -52,7 +52,7 @@ public class AddressFeaturesSteps extends CommonUtility {
 	
 	@When("User click on edit address option")
 	public void user_click_on_edit_address_option() {
-	    click(factory.getRetailAccountPage().editAddressBtn2);
+	    click(factory.getRetailAccountPage().editAddressBtn);
 	    logger.info("User clicked on Edit button for the address");
 	    
 	}

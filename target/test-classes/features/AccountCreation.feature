@@ -13,8 +13,8 @@ Feature: User wants to create account
 
     Examples: 
       | name      | email                         | password   | confirmPassword |
-      | SpongeBob | r13tz36@tekschool.us | Test12345$ | Test12345$      |
-      | Patrick   | tw212qdbdf6546@tekschool.us  | Test12345$ | Test12345$      |
+      | SpongeBob | am6ccvbvdb36@tekschool.us | Test12345$ | Test12345$      |
+      | Patrick   | tni2abv12q6@tekschool.us  | Test12345$ | Test12345$      |
      #| SpongeBob | SpongeBobs46@tekschool.us | Test12345$ | Test12345$      |
      #| Patrick | Patricks6546@tekschool.us | Test12345$ | Test12345$      |
      #| Patrick | Patrickss6546@tekschool.us | Test12345$ | Test12345$      |

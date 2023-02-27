@@ -20,5 +20,5 @@ Feature: User can add  payment  method
 
     Examples: 
       | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 8387956115160064 | Mario      |               4 |           2039 |          745 |
+      | 8387956115160061 | Mario      |               4 |           2039 |          745 |
 

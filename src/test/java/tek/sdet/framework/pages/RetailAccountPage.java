@@ -104,8 +104,8 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(className = "account__payments-wrapper")
 	public WebElement cardsOnAccount;
 
-	@FindBy(xpath = "//img[@alt = 'Master Card']")
-	public WebElement visaCard;
+	@FindBy(xpath = "(//img[@alt = 'Master Card'])[1]")
+	public WebElement bankCard;
 
 	/*
 	 * BELOW ARE LOCATORS FOR ADDRESS FEATURES
@@ -151,13 +151,13 @@ public class RetailAccountPage extends BaseSetup {
 	public WebElement addressAddedText;
 	
 	
-	@FindBy(xpath = "(//button[contains(text(),'Edit')])[2]")
-	public WebElement editAddressBtn2;
+	@FindBy(xpath = "//button[contains(text(),'Edit')]")
+	public WebElement editAddressBtn;
 	
 	@FindBy(id = "addressBtn")
 	public WebElement updateAddressBtn;
 	
-	@FindBy(xpath ="(//button[contains(text(),'Remove')])[2]")
+	@FindBy(xpath ="//button[contains(text(), 'Remove')]")
 	public WebElement removeBtn;
 	
 }

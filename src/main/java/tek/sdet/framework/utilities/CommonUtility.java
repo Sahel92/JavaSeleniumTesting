@@ -145,6 +145,14 @@ public class CommonUtility extends BaseSetup {
 		toClear.sendKeys(Keys.CONTROL + "a");
 		toClear.sendKeys(Keys.DELETE);
 	}
+	
+	// method to enter space after word in string
+	// used mostly for search boxes
+	// to make the search button icon
+	// enabled 
+	public void sendSpaceKey(WebElement searchBox) {
+	searchBox.sendKeys(Keys.SPACE);
+	}
 
 	/*
 	 * selects an element from a dropdown using its index number Takes WebElement

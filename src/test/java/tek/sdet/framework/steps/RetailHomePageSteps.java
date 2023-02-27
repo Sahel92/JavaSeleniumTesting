@@ -66,36 +66,38 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	}
 
-	@Then("User change the category to Smart Home")
-	public void userChangeTheCategoryTo() {
-		click(factory.getRetailHomePage().smartHomeDept);
-		logger.info("User changed search category to Smart Home");
+	@Then("User change the category to {string}")
+	public void userChangeTheCategoryTo(String category) {
+		selectByVisibleText(factory.getRetailHomePage().deptSelect, category);
+		//click(factory.getRetailHomePage().smartHomeDept);
+		logger.info("User changed search category to " + category);
+		
 	}
 
 	@When("User search for an item {string}")
-	public void userSearchForAnItem(String string) {
+	public void userSearchForAnItem(String itemName) {
 		clearTextUsingSendKeys(factory.getRetailHomePage().searchBox);
-		sendText(factory.getRetailHomePage().searchBox, string);
-		logger.info("User searched for " + string);
-
+		sendText(factory.getRetailHomePage().searchBox, itemName);
+		logger.info("User entered " + itemName + " into search box");
 	}
 
 	@When("User click on Search icon")
-	public void userClickOnSearchIcon() {
-		click(factory.getRetailHomePage().searchBtn);
+	public void userClickOnSearchIcon() {		
+	click(waitTillClickable((factory.getRetailHomePage().searchBtn)));
 		logger.info("User clicked on search button");
 	}
 
 	@When("User click on item")
 	public void userClickOnItem() {
-		click(factory.getRetailHomePage().kasaPlug);
-		logger.info("User clicked on the item Kasa Plug");
+		click(waitTillClickable(factory.getRetailHomePage().itemImg));
+		logger.info("User clicked on the item");
 	}
 
-	@When("User select quantity {string}")
-	public void userSelectQuantity(String quantity) {
-		selectByValue(factory.getRetailHomePage().quantitySelection, quantity);
-		logger.info("User changed quatity to " + quantity);
+	@When("User select quantity")
+	public void userSelectQuantity(DataTable dataTable) {
+		List<Map<String, String>> quantity = dataTable.asMaps(String.class,String.class);
+		selectByValue(factory.getRetailHomePage().quantitySelection, quantity.get(0).get("quantity"));
+		logger.info("User changed quatity to " + quantity.get(0).get("quantity"));
 	}
 
 	@When("User click add to Cart button")
@@ -108,7 +110,7 @@ public class RetailHomePageSteps extends CommonUtility {
 	public void theCartIconQuantityShouldChangeTo(String cartQuantity) {
 		String actualQty = getText(factory.getRetailHomePage().cartQnty);
 		String expectedQty = cartQuantity;
-		Assert.assertEquals(actualQty, expectedQty);
+		Assert.assertEquals(expectedQty,actualQty);
 		logger.info("actual quantity in cart " + actualQty + " matches expected quantity in cart: " + expectedQty);
 	}
 
@@ -144,24 +146,22 @@ public class RetailHomePageSteps extends CommonUtility {
 	    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
 	    selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
 	    clearAndSendWithJs(factory.getRetailAccountPage().securityCodeInput, cardInfo.get(0).get("securityCode"));
-	    click(factory.getRetailAccountPage().paymentSubmitBtn);
+	    click(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
 	    logger.info("User filled out card payment form at during checkout.");
 	}
 
 	@Then("User click on Place Your Order")
 	public void userClickOnPlaceYourOrder() {
-		click(factory.getRetailHomePage().placeOrderBtn);
+		click(waitTillClickable(factory.getRetailHomePage().placeOrderBtn));
 		logger.info("User clicked on Place Your Order");
 	}
 
-	@Then("Order has been placed message should be displayed {string}")
-	public void aMessageShouldBeDisplayedOrderPlacedThanks(String orderConfirm)  {
-		
-		String actualText = getText(waitTillPresence(factory.getRetailHomePage().orderPlacedText));
+	@Then("Order placed message should be displayed {string}")
+	public void aMessageShouldBeDisplayedOrderPlacedThanks(String orderConfirm)  {	
+		String actualText = getText(waitTillPresence(factory.getRetailHomePage().orderPlaced));
 		String expectedText = orderConfirm;
 		Assert.assertEquals(actualText, expectedText);
-		
-		logger.info("Order Placed Successfully is displayed");
+		logger.info("Order Placed Successfully is displayed");	
 	}
 
 	

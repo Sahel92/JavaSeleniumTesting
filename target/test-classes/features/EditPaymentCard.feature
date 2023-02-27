@@ -27,7 +27,7 @@ Feature: User able to edit their debit/credit information.
   
  
   Scenario: Verify user can remove their debit/credit card
-   And User click on bank card
+  And User click on bank card
   And User click on remove option of card section
   Then payment details should be removed
   

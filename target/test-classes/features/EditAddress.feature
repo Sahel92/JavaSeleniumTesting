@@ -1,3 +1,4 @@
+@regression
 Feature: User can edit address.
 
   Background: 
