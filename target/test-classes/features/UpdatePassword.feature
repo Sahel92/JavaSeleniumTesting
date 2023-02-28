@@ -1,4 +1,4 @@
-@smoke
+@passUpdate
 Feature: User can update password
 
   Background: 

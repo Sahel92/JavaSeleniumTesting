@@ -1,4 +1,5 @@
 tek\sdet\framework\utilities\ReadYamlFiles.class
+tek\sdet\framework\utilities\DataGeneratorUtility.class
 tek\sdet\framework\base\BaseSetup.class
 tek\sdet\framework\config\ChromeBrowser.class
 tek\sdet\framework\utilities\FileUtility.class

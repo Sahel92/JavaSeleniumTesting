@@ -17,6 +17,7 @@ public class POMFactory extends BaseSetup {
 	private RetailHomePage retailHomePage;
 	private SignUpPage signUpPage;
 	private RetailAccountPage retailAccountPage;
+	private RetailOrderPage retailOrderPage;
 
 
 
@@ -25,6 +26,7 @@ public class POMFactory extends BaseSetup {
 		this.retailHomePage = new RetailHomePage();
 		this.signUpPage = new SignUpPage();
 		this.retailAccountPage = new RetailAccountPage();
+		this.retailOrderPage = new RetailOrderPage();
 	}
 	/*
 	 * return methods for our instantiated POM classes
@@ -41,5 +43,9 @@ public class POMFactory extends BaseSetup {
 	}
 	public RetailAccountPage getRetailAccountPage() {
 		return retailAccountPage;
+	}
+	
+	public RetailOrderPage getRetailOrderPage() {
+		return retailOrderPage;
 	}
 }

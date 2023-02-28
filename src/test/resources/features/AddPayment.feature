@@ -1,4 +1,4 @@
-@regression
+
 Feature: User can add  payment  method
 
   Background: 

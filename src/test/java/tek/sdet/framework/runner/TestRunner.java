@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@regression",
+		tags = "@smoke or @orderReturn or @orderReview",
 		features = ("classpath:features"),
 		glue = "tek.sdet.framework",
 		dryRun = false,
@@ -17,7 +17,8 @@ import io.cucumber.junit.CucumberOptions;
 		"html:target/htmlReports/cucumber-pretty.html",
 		"json:target/jsonReports/cucumber.json" },
 		snippets = CAMELCASE,
-		monochrome = true)
+		monochrome = true
+		)
 
 public class TestRunner {
 

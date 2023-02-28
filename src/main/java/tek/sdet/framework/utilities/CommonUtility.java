@@ -145,14 +145,6 @@ public class CommonUtility extends BaseSetup {
 		toClear.sendKeys(Keys.CONTROL + "a");
 		toClear.sendKeys(Keys.DELETE);
 	}
-	
-	// method to enter space after word in string
-	// used mostly for search boxes
-	// to make the search button icon
-	// enabled 
-	public void sendSpaceKey(WebElement searchBox) {
-	searchBox.sendKeys(Keys.SPACE);
-	}
 
 	/*
 	 * selects an element from a dropdown using its index number Takes WebElement
@@ -311,9 +303,20 @@ public class CommonUtility extends BaseSetup {
 		JavascriptExecutor js = ((JavascriptExecutor) getDriver());
 		js.executeScript("arguments[0].value= '';", element);
 		element.sendKeys(value);
+	}
+
+// refreshes the webpage
+	public void refreshPage() {
+		getDriver().navigate().refresh();
 
 	}
-	
-	
+
+// method to search
+// used mostly for search boxes
+// to make the search button icon
+// enabled 
+	public void enterKey(WebElement searchBox) {
+		searchBox.sendKeys(Keys.ENTER);
+	}
 
 }

@@ -69,15 +69,17 @@ public class RetailHomePageSteps extends CommonUtility {
 	@Then("User change the category to {string}")
 	public void userChangeTheCategoryTo(String category) {
 		selectByVisibleText(factory.getRetailHomePage().deptSelect, category);
-		//click(factory.getRetailHomePage().smartHomeDept);
 		logger.info("User changed search category to " + category);
 		
 	}
 
 	@When("User search for an item {string}")
 	public void userSearchForAnItem(String itemName) {
+		waitTillClickable(factory.getRetailHomePage().searchBox);
 		clearTextUsingSendKeys(factory.getRetailHomePage().searchBox);
+		click(factory.getRetailHomePage().searchBox);
 		sendText(factory.getRetailHomePage().searchBox, itemName);
+		enterKey(factory.getRetailHomePage().searchBox);
 		logger.info("User entered " + itemName + " into search box");
 	}
 
@@ -89,6 +91,7 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	@When("User click on item")
 	public void userClickOnItem() {
+		fluentWaitForElement(factory.getRetailHomePage().itemImg, 5, 1);
 		click(waitTillClickable(factory.getRetailHomePage().itemImg));
 		logger.info("User clicked on the item");
 	}
@@ -96,13 +99,13 @@ public class RetailHomePageSteps extends CommonUtility {
 	@When("User select quantity")
 	public void userSelectQuantity(DataTable dataTable) {
 		List<Map<String, String>> quantity = dataTable.asMaps(String.class,String.class);
-		selectByValue(factory.getRetailHomePage().quantitySelection, quantity.get(0).get("quantity"));
+		selectByVisibleText(factory.getRetailHomePage().quantitySelection, quantity.get(0).get("quantity"));
 		logger.info("User changed quatity to " + quantity.get(0).get("quantity"));
 	}
 
 	@When("User click add to Cart button")
 	public void userClickAddToCartButton() {
-		click(factory.getRetailHomePage().addToCartBtn);
+		click(waitTillClickable(factory.getRetailHomePage().addToCartBtn));
 		logger.info("User added items to cart");
 	}
 

@@ -1,4 +1,4 @@
-@regression
+
 Feature: User able to edit their debit/credit information. 
   
 

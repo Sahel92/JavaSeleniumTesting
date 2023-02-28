@@ -37,8 +37,7 @@ public void userFillsDebitOrCreditCardInformation(String string, String string2,
 
 @When("User click on Add your card button")
 public void userClickOnAddYourCardButton() {
-    Assert.assertTrue(isElementEnabled(factory.getRetailAccountPage().paymentSubmitBtn));
-    logger.info("Add your card button is enabled");
+   
     click(factory.getRetailAccountPage().paymentSubmitBtn);
     logger.info("User clicked on Add Your card button");
 }

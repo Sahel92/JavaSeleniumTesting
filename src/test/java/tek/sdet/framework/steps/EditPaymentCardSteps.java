@@ -76,14 +76,18 @@ public class EditPaymentCardSteps extends CommonUtility {
 
 	@When("User click on remove option of card section")
 	public void userClickOnRemoveOptionOfCardSection(){
-
 		click(waitTillClickable(factory.getRetailAccountPage().removeCardBtn));
 		logger.info("User clicked on remove option of card section");
 	}
 
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
-		Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().bankCard));
+		try {
+			Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().bankCard));
+		} catch (Exception e) {
+			System.out.println("Element is not present on page anymore " + e.getMessage());
+		}
+		//Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().bankCard));
 		logger.info("card removed from account");
 	}
 

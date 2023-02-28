@@ -1,4 +1,4 @@
-@regression
+@pass
 Feature: Retail Home Page
 
   Background: 
@@ -29,7 +29,7 @@ Feature: Retail Home Page
       | Sports      | Athletic Clothing              | Exercise & Fitness       |
       | Automative  | Automative Parts & Accessories | MotorCycle & Powersports |
 
- 
+@smoke
   Scenario: Verify User can add an item to cart
     And User change the category to 'Smart Home'
     And User search for an item "kasa outdoor smart plug"
@@ -40,15 +40,9 @@ Feature: Retail Home Page
       |        2 |
     And User click add to Cart button
     Then the cart icon quantity should change to "2"
-
-
-# Added three steps from remove card scenarion for this scenario. This will ensure that no card is on 
-# file at the start of this code. 
-# When this scenario executes a card will be added on file, which is required for scenario after this one. 
+    
+@smoke
   Scenario: Verify User can place an order without Shipping address and payment Method on file
-    When User click on Account option
-    And User click on bank card
-  	And User click on remove option of card section
     And User click on Cart option
     And User click on Proceed to Checkout button
     And User click Add a new address link for shipping address
@@ -65,9 +59,10 @@ Feature: Retail Home Page
     Then Order placed message should be displayed "Order Placed, Thanks"
 
 
+@smoke
   Scenario: Verify User can place an order with Shipping address and payment Method on file
     And User change the category to 'Electronics'
-    And User search for an item 'Apex Legends '
+    And User search for an item 'Apex Legends'
     And User click on Search icon
     And User click on item
     And User select quantity
@@ -79,3 +74,8 @@ Feature: Retail Home Page
     And User click on Proceed to Checkout button
     And User click on Place Your Order
     Then Order placed message should be displayed "Order Placed, Thanks"
+    When User click on Account option
+    And User click on bank card
+  	And User click on remove option of card section
+  	And User click on remove option of Address section
+    And Address details should be removed
