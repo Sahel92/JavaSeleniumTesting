@@ -1,4 +1,4 @@
-@pass
+@regression
 Feature: Retail Home Page
 
   Background: 
@@ -29,7 +29,6 @@ Feature: Retail Home Page
       | Sports      | Athletic Clothing              | Exercise & Fitness       |
       | Automative  | Automative Parts & Accessories | MotorCycle & Powersports |
 
-@smoke
   Scenario: Verify User can add an item to cart
     And User change the category to 'Smart Home'
     And User search for an item "kasa outdoor smart plug"
@@ -41,7 +40,7 @@ Feature: Retail Home Page
     And User click add to Cart button
     Then the cart icon quantity should change to "2"
     
-@smoke
+
   Scenario: Verify User can place an order without Shipping address and payment Method on file
     And User click on Cart option
     And User click on Proceed to Checkout button
@@ -59,7 +58,7 @@ Feature: Retail Home Page
     Then Order placed message should be displayed "Order Placed, Thanks"
 
 
-@smoke
+
   Scenario: Verify User can place an order with Shipping address and payment Method on file
     And User change the category to 'Electronics'
     And User search for an item 'Apex Legends'

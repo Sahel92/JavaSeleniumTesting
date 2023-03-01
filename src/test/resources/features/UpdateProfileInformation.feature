@@ -1,4 +1,4 @@
-
+@regression
 Feature: User wants to update profile
 
 Background: 

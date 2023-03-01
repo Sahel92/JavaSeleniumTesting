@@ -65,6 +65,7 @@ public class SignInSteps extends CommonUtility {
 		logger.info("Orders link is displayed at the top of page");
 	}
 
+	
 	/*
 	 * This method used in feature files that require being logged into an account
 	 * even if i run the password update test I can still use this method for other
@@ -74,12 +75,13 @@ public class SignInSteps extends CommonUtility {
 	
 	@When("User enters following login credentials")
 	public void userEntersFollowingLoginCredentials(DataTable credentials) {
+	
 		List<Map<String, String>> loginInfo = credentials.asMaps(String.class, String.class);
 		String email = loginInfo.get(0).get("Email");
 		String password = loginInfo.get(0).get("Password");
 		sendText(factory.getRetailSignInPage().emailField, email);
 		sendText(factory.getRetailSignInPage().passWrdField, password);
-
+			
 	}
 
 

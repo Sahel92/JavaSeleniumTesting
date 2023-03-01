@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
@@ -149,13 +150,21 @@ public class RetailHomePageSteps extends CommonUtility {
 	    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
 	    selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
 	    clearAndSendWithJs(factory.getRetailAccountPage().securityCodeInput, cardInfo.get(0).get("securityCode"));
+	   
 	    click(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
 	    logger.info("User filled out card payment form at during checkout.");
 	}
 
 	@Then("User click on Place Your Order")
 	public void userClickOnPlaceYourOrder() {
-		click(waitTillClickable(factory.getRetailHomePage().placeOrderBtn));
+		 try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		waitTillClickable(factory.getRetailHomePage().placeOrderBtn);
+		click(factory.getRetailHomePage().placeOrderBtn);
 		logger.info("User clicked on Place Your Order");
 	}
 
@@ -167,10 +176,4 @@ public class RetailHomePageSteps extends CommonUtility {
 		logger.info("Order Placed Successfully is displayed");	
 	}
 
-	
-	
-	
-	
-	
-	
 }

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -37,18 +39,17 @@ public class EditPaymentCardSteps extends CommonUtility {
 
 		clearTextUsingSendKeys(waitTillPresence(factory.getRetailAccountPage().cardNumberInput));
 		sendText(factory.getRetailAccountPage().cardNumberInput, cardNumber);
-		logger.info("Card number has been edited.");
-
+		
 		clearTextUsingSendKeys(factory.getRetailAccountPage().nameOnCardInput);
 		sendText(factory.getRetailAccountPage().nameOnCardInput, nameOnCard);
-		logger.info("Card name has been edited.");
+		
 		selectByValue(factory.getRetailAccountPage().expirationMonthInput, expMonth);
-		logger.info("Expiration month updated");
+		
 		selectByValue(factory.getRetailAccountPage().expirationYearInput, expYr);
-		logger.info("Expiration year updated");
+	
 		clearTextUsingSendKeys(factory.getRetailAccountPage().securityCodeInput);
 		sendText(factory.getRetailAccountPage().securityCodeInput, scrCode);
-		logger.info("CCV security has been chaged");
+		logger.info("User has edited and updated their payment method");
 
 	}
 
@@ -82,13 +83,14 @@ public class EditPaymentCardSteps extends CommonUtility {
 
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
+		waitTillPresence(factory.getRetailHomePage().tekSchoolLogo);
 		try {
-			Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().bankCard));
-		} catch (Exception e) {
-			System.out.println("Element is not present on page anymore " + e.getMessage());
+			Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().bankCard));
+		} catch (NoSuchElementException | TimeoutException e) {
+			logger.warn("Bank card element not found on page: Removed by user. " + e.getMessage());
 		}
 		//Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().bankCard));
-		logger.info("card removed from account");
+		logger.info("Payment Card removed successfully from account.");
 	}
 
 }

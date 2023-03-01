@@ -38,7 +38,7 @@ public void userFillsDebitOrCreditCardInformation(String string, String string2,
 @When("User click on Add your card button")
 public void userClickOnAddYourCardButton() {
    
-    click(factory.getRetailAccountPage().paymentSubmitBtn);
+    click(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
     logger.info("User clicked on Add Your card button");
 }
 

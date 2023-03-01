@@ -20,9 +20,9 @@ public class DataGeneratorUtility {
 		
 		String outPut = "";
 		if(input.equals("firstName")) {
-			outPut = faker.name().firstName();
+			outPut = faker.name().firstName().replaceAll("[^a-zA-Z]", "");
 		}else if(input.equals("lastName")) {
-			outPut = faker.name().lastName();
+			outPut = faker.name().lastName().replaceAll("[^a-zA-Z]", "");
 		}else if (input.equals("email")) {
 			outPut = faker.expression("#{letterify '?????.????@tekschool.us'}");
 		}else if(input.equals("phoneNumber")) {

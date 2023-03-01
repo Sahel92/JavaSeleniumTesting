@@ -1,4 +1,4 @@
-
+@regression
 Feature: User wants to create account
 
   Background: 
@@ -13,11 +13,3 @@ Feature: User wants to create account
     And User click on SignUp button
     Then User should be logged into account page
 
-    #Examples: 
-      #| name     | email                   | password   | confirmPassword |
-      #| fullName | email                   | Test12345$ | Test12345$      |
-      #| Patrick  | toiabv12q6@tekschool.us | Test12345$ | Test12345$      |
-     #| SpongeBob | SpongeBobs46@tekschool.us | Test12345$ | Test12345$      |
-     #| Patrick | Patricks6546@tekschool.us | Test12345$ | Test12345$      |
-     #| Patrick | Patrickss6546@tekschool.us | Test12345$ | Test12345$      |
-     #| SpongeBob | SpongeBobss46@tekschool.us | Test12345$ | Test12345$      |
