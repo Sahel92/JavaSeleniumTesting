@@ -104,7 +104,7 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(className = "account__payments-wrapper")
 	public WebElement cardsOnAccount;
 
-	@FindBy(xpath = "(//img[@alt = 'Master Card'])[1]")
+	@FindBy(xpath = "//img[@alt = 'Master Card']")
 	public WebElement bankCard;
 
 	/*

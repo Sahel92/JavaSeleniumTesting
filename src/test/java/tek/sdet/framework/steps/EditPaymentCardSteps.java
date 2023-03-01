@@ -83,8 +83,14 @@ public class EditPaymentCardSteps extends CommonUtility {
 
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
-		waitTillPresence(factory.getRetailHomePage().tekSchoolLogo);
 		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		
+		try {
+			
 			Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().bankCard));
 		} catch (NoSuchElementException | TimeoutException e) {
 			logger.warn("Bank card element not found on page: Removed by user. " + e.getMessage());

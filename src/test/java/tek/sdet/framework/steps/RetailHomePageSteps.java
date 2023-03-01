@@ -112,7 +112,7 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	@Then("the cart icon quantity should change to {string}")
 	public void theCartIconQuantityShouldChangeTo(String cartQuantity) {
-	Assert.assertEquals(factory.getRetailHomePage().cartQnty.getText(),cartQuantity);
+	Assert.assertEquals(cartQuantity,factory.getRetailHomePage().cartQnty.getText());
 		logger.info("actual quantity in cart: " + cartQuantity);
 	}
 
