@@ -37,7 +37,7 @@ public class BaseSetup {
 	@SuppressWarnings("static-access")
 	public BaseSetup() {
 		String filePath = System.getProperty("user.dir") + "/src/main/resources/env_config.yml";
-		String log4JPath = System.getProperty("user.dir") + "/srs/main/resources/log4j.properties";
+		String log4JPath = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
 
 		try {
 			environmentVariables = ReadYamlFiles.getInstance(filePath);

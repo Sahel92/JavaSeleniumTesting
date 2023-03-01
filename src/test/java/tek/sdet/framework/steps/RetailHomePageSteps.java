@@ -13,6 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class RetailHomePageSteps extends CommonUtility {
 	private POMFactory factory = new POMFactory();
@@ -97,11 +98,10 @@ public class RetailHomePageSteps extends CommonUtility {
 		logger.info("User clicked on the item");
 	}
 
-	@When("User select quantity")
-	public void userSelectQuantity(DataTable dataTable) {
-		List<Map<String, String>> quantity = dataTable.asMaps(String.class,String.class);
-		selectByVisibleText(factory.getRetailHomePage().quantitySelection, quantity.get(0).get("quantity"));
-		logger.info("User changed quatity to " + quantity.get(0).get("quantity"));
+	@When("User select quantity {string}")
+	public void userSelectQuantity(String quantitySelect) {	
+		selectByVisibleText(factory.getRetailHomePage().quantitySelection, quantitySelect);		
+		logger.info("User changed quatity to " + quantitySelect);
 	}
 
 	@When("User click add to Cart button")
@@ -112,10 +112,8 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	@Then("the cart icon quantity should change to {string}")
 	public void theCartIconQuantityShouldChangeTo(String cartQuantity) {
-		String actualQty = getText(factory.getRetailHomePage().cartQnty);
-		String expectedQty = cartQuantity;
-		Assert.assertEquals(expectedQty,actualQty);
-		logger.info("actual quantity in cart " + actualQty + " matches expected quantity in cart: " + expectedQty);
+	Assert.assertEquals(factory.getRetailHomePage().cartQnty.getText(),cartQuantity);
+		logger.info("actual quantity in cart: " + cartQuantity);
 	}
 
 	@Then("User click on Cart option")
@@ -145,8 +143,8 @@ public class RetailHomePageSteps extends CommonUtility {
 	@Then("User fills debit or credit card information")
 	public void userFillsDebitOrCreditCardInformation(DataTable dataTable)  {
 	    List<Map<String, String>> cardInfo = dataTable.asMaps(String.class, String.class);
-	    clearAndSendWithJs(factory.getRetailAccountPage().cardNumberInput, cardInfo.get(0).get("cardNumber"));
-	    clearAndSendWithJs(factory.getRetailAccountPage().nameOnCardInput, cardInfo.get(0).get("nameOnCard"));
+	    clearAndSendWithJs(factory.getRetailAccountPage().cardNumberInput, DataGeneratorUtility.data(cardInfo.get(0).get("cardNumber")));
+	    clearAndSendWithJs(factory.getRetailAccountPage().nameOnCardInput, DataGeneratorUtility.data(cardInfo.get(0).get("nameOnCard")));
 	    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
 	    selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
 	    clearAndSendWithJs(factory.getRetailAccountPage().securityCodeInput, cardInfo.get(0).get("securityCode"));
@@ -157,12 +155,6 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	@Then("User click on Place Your Order")
 	public void userClickOnPlaceYourOrder() {
-		 try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		waitTillClickable(factory.getRetailHomePage().placeOrderBtn);
 		click(factory.getRetailHomePage().placeOrderBtn);
 		logger.info("User clicked on Place Your Order");
@@ -175,5 +167,22 @@ public class RetailHomePageSteps extends CommonUtility {
 		Assert.assertEquals(actualText, expectedText);
 		logger.info("Order Placed Successfully is displayed");	
 	}
+	
+	@When("user fill new address form during checkout")
+	public void user_fill_new_address_form_with_below_information(DataTable dataTable) {
+	    List<Map<String, String>> addressInfo = dataTable.asMaps(String.class, String.class);
+	    selectByValue(factory.getRetailAccountPage().countryDropdown, addressInfo.get(0).get("country"));
+	    sendText(factory.getRetailAccountPage().fullNameInput,DataGeneratorUtility.data(addressInfo.get(0).get("fullName")));
+	    sendText(factory.getRetailAccountPage().phoneNumberInput,addressInfo.get(0).get("phoneNumber"));
+	    sendText(factory.getRetailAccountPage().streetInput, addressInfo.get(0).get("streetAddress"));
+	    sendText(factory.getRetailAccountPage().apartmentInput, addressInfo.get(0).get("apt"));
+	    sendText(factory.getRetailAccountPage().cityInput, addressInfo.get(0).get("city"));
+	    selectByValue(factory.getRetailAccountPage().state, addressInfo.get(0).get("state"));
+	    sendText(factory.getRetailAccountPage().zipCodeInput,DataGeneratorUtility.data(addressInfo.get(0).get("zipCode")));
+	    logger.info("User has filled the address form");
+
+	}
+	
+	
 
 }

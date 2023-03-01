@@ -13,6 +13,7 @@ public class DataGeneratorUtility {
 		System.out.println(data("city"));
 		System.out.println(data("state"));
 		System.out.println(data("zipCode"));
+		System.out.println(data("cardNumber"));
 	}
 	
 	public static String data(String input) {
@@ -37,6 +38,8 @@ public class DataGeneratorUtility {
 			outPut = faker.address().state();
 		}else if(input.equals("zipCode")){
 			outPut = faker.address().zipCode();
+		}else if(input.equals("cardNumber")) {
+			outPut = faker.numerify("4213############");
 		}
 		return outPut;
 	

@@ -103,7 +103,10 @@ public class RetailHomePage extends BaseSetup {
 	
 @FindBy(xpath = "//p[contains(text(),'Order Placed, Thanks')]")
 public WebElement orderPlaced;
-	
+
+//@FindBy(xpath = "//div[contains(text(),'You have a card with this number. please use anoth')]")
+//public WebElement 
+//	
 	
 	
 }
