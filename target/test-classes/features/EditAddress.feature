@@ -6,7 +6,7 @@ Feature: User can edit address.
     When User clicks on Sign in option
     And User enters following login credentials
       | Email                    | Password  |
-      | billybob123@tekschool.us | Pizza123$ |
+      | SpongeBobss46@tekschool.us | Test12345$ |
     And User clicks on login button
     Then User should be logged into their account
     When User click on Account option

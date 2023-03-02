@@ -49,7 +49,7 @@ Feature: Retail Home Page
       | Panama  | fullName |  1234567890 | 123 fake st   |   1 | Panama City | Los Santos |  zipCode |
     And User click Add Your Address button
     And User click Add a credit card or Debit Card for Payment method
-    And User fills debit or credit card information
+    And User fills debit or credit card information during checkout
      #using dataFaker to generate random cardNumber and FullName 
      # this will validate that a user can add payment at checkout
       | cardNumber | nameOnCard | expirationMonth | expirationYear | securityCode |

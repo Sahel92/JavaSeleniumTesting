@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
+
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -17,6 +16,8 @@ public class EditPaymentCardSteps extends CommonUtility {
 
 	POMFactory factory = new POMFactory();
 
+	
+	
 	@When("User clicks on Edit option of card section")
 	public void userClicksOnEditOptionOfCardSection() {
 		click(factory.getRetailAccountPage().bankCard);
@@ -69,34 +70,33 @@ public class EditPaymentCardSteps extends CommonUtility {
 		Assert.assertEquals(actualMessage, expectedMessage);
 		logger.info("Expected message: " + expectedMessage + " Actual message: " + actualMessage);
 	}
-	@When("User click on bank card")
-	public void userClickOnBankCard() {
-	    clickElementWithJS(factory.getRetailAccountPage().bankCard);
-	    logger.info("user clicked on bank card");
-	}
+	
+	/*
+	 * below code was conflicting with test
+	 */
+//	@When("User click on bank card")
+//	public void userClickOnBankCard() {
+//	    click(factory.getRetailAccountPage().bankCard);
+//	    logger.info("user clicked on bank card");
+//	}
 
+	public static int cardListSize;
 	@When("User click on remove option of card section")
 	public void userClickOnRemoveOptionOfCardSection(){
-		click(waitTillClickable(factory.getRetailAccountPage().removeCardBtn));
+		click(waitTillClickable(factory.getRetailAccountPage().firstPaymentCard));
+		cardListSize = factory.getRetailAccountPage().listOfPaymentCards.size();
+		click(factory.getRetailAccountPage().removeCardBtn);
 		logger.info("User clicked on remove option of card section");
 	}
-
+	
+	
+	
 	@Then("payment details should be removed")
 	public void paymentDEtailsShouldBeRemoved() {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
+			Assert.assertNotEquals(factory.getRetailAccountPage().listOfPaymentCards.size(), cardListSize - 1);		
+			logger.info("Payment Card removed successfully from account.");
 		}
 		
-		try {
-			
-			Assert.assertFalse(!isElementDisplayed(factory.getRetailAccountPage().bankCard));
-		} catch (NoSuchElementException | TimeoutException e) {
-			logger.warn("Bank card element not found on page: Removed by user. " + e.getMessage());
-		}
-		//Assert.assertFalse(isElementDisplayed(factory.getRetailAccountPage().bankCard));
-		logger.info("Payment Card removed successfully from account.");
 	}
 
-}
+

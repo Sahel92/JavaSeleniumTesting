@@ -1,11 +1,16 @@
 package tek.sdet.framework.steps;
 
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class AddPaymentSteps extends CommonUtility  {
 
@@ -20,25 +25,21 @@ public void userClickOnAddAPaymentMethodLink() {
     logger.info("User clicked on add a payment link");
 }
 
-@When("User fills debit or credit card information {string} {string} {string} {string} {string}")
-public void userFillsDebitOrCreditCardInformation(String string, String string2, String string3, String string4, String string5) {
-    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().cardNumberInput));
-    Assert.assertTrue(isElementEnabled(factory.getRetailAccountPage().expirationMonthInput));
-    logger.info("Card number field is present");
-    logger.info("Expiration month input is enabled");
-    sendText(factory.getRetailAccountPage().cardNumberInput, string);
-    sendText(factory.getRetailAccountPage().nameOnCardInput, string2);
-    selectByValue(factory.getRetailAccountPage().expirationMonthInput, string3);
-    selectByValue(factory.getRetailAccountPage().expirationYearInput, string4);
+@When("User fills debit or credit card information")
+public void userFillsDebitOrCreditCardInformation(DataTable dataTable) {
+    List<Map<String, String>> cardInfo = dataTable.asMaps(String.class, String.class);
+    sendText(factory.getRetailAccountPage().cardNumberInput,DataGeneratorUtility.data(cardInfo.get(0).get("cardNumber")));
+    sendText(factory.getRetailAccountPage().nameOnCardInput, DataGeneratorUtility.data(cardInfo.get(0).get("nameOnCard")));
+    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
+    selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
     clearTextUsingSendKeys(factory.getRetailAccountPage().securityCodeInput);
-    sendText(factory.getRetailAccountPage().securityCodeInput, string5);
+    sendText(factory.getRetailAccountPage().securityCodeInput, DataGeneratorUtility.data(cardInfo.get(0).get("securityCode")));
     logger.info("User has filled out the add debit or credit card form.");
 }
 
 @When("User click on Add your card button")
 public void userClickOnAddYourCardButton() {
-   
-    click(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
+    clickElementWithJS(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
     logger.info("User clicked on Add Your card button");
 }
 

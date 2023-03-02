@@ -1,5 +1,7 @@
 package tek.sdet.framework.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -91,6 +93,15 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(id = "credentialsSubmitBtn")
 	public WebElement changePasswordBtn;
 
+	@FindBy(xpath = "//div[@class='account__payment-sub']")
+	public List<WebElement> listOfPaymentCards;
+	
+	@FindBy(xpath = "//div[contains(@class, 'false account__payment-item')][1]")
+	public WebElement firstPaymentCard;
+	
+	@FindBy(xpath = "//div[@class='account__payment-selected account__payment-item']")
+	public WebElement firstSelectedCard;
+
 	// This element when clicked on will present the options to edit or remove card.
 //		@FindBy(className = "false account__payment-item")
 //		public WebElement cardOptions;
@@ -149,15 +160,14 @@ public class RetailAccountPage extends BaseSetup {
 
 	@FindBy(xpath = "//div[contains(text() , 'Address Added Successfully')]")
 	public WebElement addressAddedText;
-	
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Edit')]")
 	public WebElement editAddressBtn;
-	
+
 	@FindBy(id = "addressBtn")
 	public WebElement updateAddressBtn;
-	
-	@FindBy(xpath ="//button[contains(text(), 'Remove')]")
+
+	@FindBy(xpath = "//button[contains(text(), 'Remove')]")
 	public WebElement removeBtn;
-	
+
 }
