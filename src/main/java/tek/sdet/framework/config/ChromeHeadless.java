@@ -21,7 +21,7 @@ public class ChromeHeadless implements Browser {
 	public WebDriver openBrowser(String url) {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
+		options.addArguments("--headless", "\"--remote-allow-origins=*\"");
 		WebDriver driver = new ChromeDriver(options);
 		driver.get(url);
 		return driver;

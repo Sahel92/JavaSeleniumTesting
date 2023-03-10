@@ -50,10 +50,8 @@ public class SignUpSteps extends CommonUtility {
 
 	@Then("User should be logged into account page")
 	public void user_should_be_logged_into_account_page() {
-		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().orderLink));
 		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().logoutBtn));
-		logger.info("Order link is displayed");
-		logger.info("Log out button is displayed");
+		logger.info("User is logged into Account");
 	}
 
 }

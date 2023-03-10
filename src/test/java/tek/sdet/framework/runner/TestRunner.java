@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@regression",
+		tags = "@SmokeTest",
 		features = ("classpath:features"),
 		glue = "tek.sdet.framework",
 		dryRun = false,

@@ -99,14 +99,13 @@ public class RetailHomePage extends BaseSetup {
 	public WebElement placeOrderBtn;
 
 	@FindBy(xpath = "//div[contains(text(),'Order Placed Successfully')]")
-	public WebElement   orderSucessfullText;
-	
-@FindBy(xpath = "//p[contains(text(),'Order Placed, Thanks')]")
-public WebElement orderPlaced;
+	public WebElement orderSucessfullText;
+
+	@FindBy(xpath = "//p[contains(text(),'Order Placed, Thanks')]")
+	public WebElement orderPlaced;
 
 //@FindBy(xpath = "//div[contains(text(),'You have a card with this number. please use anoth')]")
-//public WebElement 
-//	
-	
-	
+
+	@FindBy(xpath = "//button[@id='paymentSubmitBtn']")
+	public WebElement AddCardBtn;
 }

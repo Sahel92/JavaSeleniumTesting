@@ -20,7 +20,7 @@ public class BaseUITest extends CommonUtility {
 //
 //	scenario.attach(screenshot, "image/png", "Screenshot");
 //	}
-
+//
 
 
 	@After

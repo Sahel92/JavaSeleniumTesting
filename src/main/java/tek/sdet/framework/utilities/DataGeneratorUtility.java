@@ -3,19 +3,6 @@ package tek.sdet.framework.utilities;
 import net.datafaker.Faker;
 
 public class DataGeneratorUtility {
-	public static void main(String[] args) {
-		System.out.println(data("firstName"));
-		System.out.println(data("lastName"));
-		System.out.println(data("email"));
-		System.out.println(data("phoneNumber"));
-		System.out.println(data("fullName"));
-		System.out.println(data("address"));
-		System.out.println(data("city"));
-		System.out.println(data("state"));
-		System.out.println(data("zipCode"));
-		System.out.println(data("cardNumber"));
-		System.out.println(data("ccv"));
-	}
 	
 	public static String data(String input) {
 		Faker faker = new Faker();

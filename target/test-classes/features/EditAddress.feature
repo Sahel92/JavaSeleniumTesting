@@ -1,11 +1,11 @@
-@regression
+@SmokeTest
 Feature: User can edit address.
 
   Background: 
     Given User is on retail website
     When User clicks on Sign in option
     And User enters following login credentials
-      | Email                    | Password  |
+      | Email                      | Password   |
       | SpongeBobss46@tekschool.us | Test12345$ |
     And User clicks on login button
     Then User should be logged into their account
@@ -27,7 +27,6 @@ Feature: User can edit address.
     And User click update Your Address button
     Then A confirmation message should be displayed 'Address Updated Successfully'
 
-  
   Scenario: Verify User can remove Address from Account
     And User click on remove option of Address section
     Then Address details should be removed

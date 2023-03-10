@@ -72,7 +72,7 @@ public class RetailHomePageSteps extends CommonUtility {
 	public void userChangeTheCategoryTo(String category) {
 		selectByVisibleText(factory.getRetailHomePage().deptSelect, category);
 		logger.info("User changed search category to " + category);
-		
+
 	}
 
 	@When("User search for an item {string}")
@@ -86,8 +86,8 @@ public class RetailHomePageSteps extends CommonUtility {
 	}
 
 	@When("User click on Search icon")
-	public void userClickOnSearchIcon() {		
-	click(waitTillClickable((factory.getRetailHomePage().searchBtn)));
+	public void userClickOnSearchIcon() {
+		click(waitTillClickable((factory.getRetailHomePage().searchBtn)));
 		logger.info("User clicked on search button");
 	}
 
@@ -99,8 +99,8 @@ public class RetailHomePageSteps extends CommonUtility {
 	}
 
 	@When("User select quantity {string}")
-	public void userSelectQuantity(String quantitySelect) {	
-		selectByVisibleText(factory.getRetailHomePage().quantitySelection, quantitySelect);		
+	public void userSelectQuantity(String quantitySelect) {
+		selectByVisibleText(factory.getRetailHomePage().quantitySelection, quantitySelect);
 		logger.info("User changed quatity to " + quantitySelect);
 	}
 
@@ -112,7 +112,7 @@ public class RetailHomePageSteps extends CommonUtility {
 
 	@Then("the cart icon quantity should change to {string}")
 	public void theCartIconQuantityShouldChangeTo(String cartQuantity) {
-	Assert.assertTrue(cartQuantity,factory.getRetailHomePage().cartQnty.getText() != null);
+		Assert.assertEquals(cartQuantity, getText(waitTillPresence(factory.getRetailHomePage().cartQnty)));
 		logger.info("actual quantity in cart: " + cartQuantity);
 	}
 
@@ -139,18 +139,20 @@ public class RetailHomePageSteps extends CommonUtility {
 		clickElementWithJS(factory.getRetailHomePage().addPaymentBtn);
 		logger.info("User clicked on Add a Credit or Debit Card at checkout");
 	}
-	
+
 	@Then("User fills debit or credit card information during checkout")
-	public void userFillsDebitOrCreditCardInformation(DataTable dataTable)  {
-	    List<Map<String, String>> cardInfo = dataTable.asMaps(String.class, String.class);
-	    clearAndSendWithJs(factory.getRetailAccountPage().cardNumberInput, DataGeneratorUtility.data(cardInfo.get(0).get("cardNumber")));
-	    clearAndSendWithJs(factory.getRetailAccountPage().nameOnCardInput, DataGeneratorUtility.data(cardInfo.get(0).get("nameOnCard")));
-	    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
-	    selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
-	    clearAndSendWithJs(factory.getRetailAccountPage().securityCodeInput, cardInfo.get(0).get("securityCode"));
-	   
-	    click(waitTillClickable(factory.getRetailAccountPage().paymentSubmitBtn));
-	    logger.info("User filled out new card payment form at during checkout.");
+	public void userFillsDebitOrCreditCardInformation(DataTable dataTable) {
+		List<Map<String, String>> cardInfo = dataTable.asMaps(String.class, String.class);
+		clearAndSendWithJs(factory.getRetailAccountPage().cardNumberInput,
+				DataGeneratorUtility.data(cardInfo.get(0).get("cardNumber")));
+		clearAndSendWithJs(factory.getRetailAccountPage().nameOnCardInput,
+				DataGeneratorUtility.data(cardInfo.get(0).get("nameOnCard")));
+		selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
+		selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
+		clearAndSendWithJs(factory.getRetailAccountPage().securityCodeInput, DataGeneratorUtility.data(cardInfo.get(0).get("securityCode")));
+
+		click(waitTillClickable(factory.getRetailHomePage().AddCardBtn));
+		logger.info("User filled out new card payment form at during checkout.");
 	}
 
 	@Then("User click on Place Your Order")
@@ -161,28 +163,28 @@ public class RetailHomePageSteps extends CommonUtility {
 	}
 
 	@Then("Order placed message should be displayed {string}")
-	public void aMessageShouldBeDisplayedOrderPlacedThanks(String orderConfirm)  {	
+	public void aMessageShouldBeDisplayedOrderPlacedThanks(String orderConfirm) {
 		String actualText = getText(waitTillPresence(factory.getRetailHomePage().orderPlaced));
 		String expectedText = orderConfirm;
 		Assert.assertEquals(actualText, expectedText);
-		logger.info("Order Placed Successfully is displayed");	
+		logger.info("Order Placed Successfully is displayed");
 	}
-	
+
 	@When("user fill new address form during checkout")
 	public void user_fill_new_address_form_with_below_information(DataTable dataTable) {
-	    List<Map<String, String>> addressInfo = dataTable.asMaps(String.class, String.class);
-	    selectByValue(factory.getRetailAccountPage().countryDropdown, addressInfo.get(0).get("country"));
-	    sendText(factory.getRetailAccountPage().fullNameInput,DataGeneratorUtility.data(addressInfo.get(0).get("fullName")));
-	    sendText(factory.getRetailAccountPage().phoneNumberInput,addressInfo.get(0).get("phoneNumber"));
-	    sendText(factory.getRetailAccountPage().streetInput, addressInfo.get(0).get("streetAddress"));
-	    sendText(factory.getRetailAccountPage().apartmentInput, addressInfo.get(0).get("apt"));
-	    sendText(factory.getRetailAccountPage().cityInput, addressInfo.get(0).get("city"));
-	    selectByValue(factory.getRetailAccountPage().state, addressInfo.get(0).get("state"));
-	    sendText(factory.getRetailAccountPage().zipCodeInput,DataGeneratorUtility.data(addressInfo.get(0).get("zipCode")));
-	    logger.info("User has filled the address form");
+		List<Map<String, String>> addressInfo = dataTable.asMaps(String.class, String.class);
+		selectByValue(factory.getRetailAccountPage().countryDropdown, addressInfo.get(0).get("country"));
+		sendText(factory.getRetailAccountPage().fullNameInput,
+				DataGeneratorUtility.data(addressInfo.get(0).get("fullName")));
+		sendText(factory.getRetailAccountPage().phoneNumberInput, addressInfo.get(0).get("phoneNumber"));
+		sendText(factory.getRetailAccountPage().streetInput, addressInfo.get(0).get("streetAddress"));
+		sendText(factory.getRetailAccountPage().apartmentInput, addressInfo.get(0).get("apt"));
+		sendText(factory.getRetailAccountPage().cityInput, addressInfo.get(0).get("city"));
+		selectByValue(factory.getRetailAccountPage().state, addressInfo.get(0).get("state"));
+		sendText(factory.getRetailAccountPage().zipCodeInput,
+				DataGeneratorUtility.data(addressInfo.get(0).get("zipCode")));
+		logger.info("User has filled the address form");
 
 	}
-	
-	
 
 }

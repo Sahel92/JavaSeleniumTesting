@@ -1,4 +1,4 @@
-@regression
+@SmokeTest
 Feature: Sign In Feature
   User wants to sign into account
 
@@ -6,13 +6,11 @@ Feature: Sign In Feature
     Given User is on retail website
     When User clicks on Sign in option
 
-  
   Scenario Outline: Verify user can sign into Retail Application
     And User enters "<email>" and "<password>"
     And User clicks on login button
     Then User should be logged into their account
 
     Examples: 
-      | email                         | password   |  
-      | billybob123@tekschool.us      | Pizza123$  |  
-     # | peterGriffin6546@tekschool.us | Test12345$ |  
+      | email                    | password  |
+      | billybob123@tekschool.us | Pizza123$ |
