@@ -1,4 +1,4 @@
-@SmokeTest
+@RegressionTest
 Feature: User can update password
 
   Background: 
@@ -6,12 +6,12 @@ Feature: User can update password
     When User clicks on Sign in option
 
   Scenario Outline: Verify that user can update password
-    And User enters following login credentials
+    When User enters following login credentials
       | Email                      | Password           |
       | Patrickss6546@tekschool.us | <previousPassword> |
     And User clicks on login button
     Then User should be logged into their account
-    When User click on Account option
+    And User click on Account option
     And User enters '<previousPassword>' '<newPassword>' '<confirmPassword>'
     When User click on Change Password button
     Then A message should be displayed 'Password Updated Successfully'

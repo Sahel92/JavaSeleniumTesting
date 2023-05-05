@@ -15,7 +15,7 @@ public class EdgeBrowser implements Browser {
 		WebDriverManager.edgedriver().setup();
 		WebDriver driver = new EdgeDriver();
 		driver.get(url);
-		return null;
+		return driver;
 	}
 
 

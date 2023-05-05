@@ -1,5 +1,5 @@
-@SmokeTest
-Feature: User wants to create account
+@RegressionTest
+Feature: To test account creation functionality.
 
   Background: 
     Given User is on retail website

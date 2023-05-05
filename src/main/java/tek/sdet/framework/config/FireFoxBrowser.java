@@ -16,7 +16,7 @@ public class FireFoxBrowser implements Browser{
 		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
-		return null;
+		return driver;
 	}
 
 }

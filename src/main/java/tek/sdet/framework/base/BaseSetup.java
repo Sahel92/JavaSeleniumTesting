@@ -34,7 +34,6 @@ public class BaseSetup {
 	 *
 	 * Finally the last method configures the properties of the log4JPath file
 	 */
-	@SuppressWarnings("static-access")
 	public BaseSetup() {
 		String filePath = System.getProperty("user.dir") + "/src/main/resources/env_config.yml";
 		String log4JPath = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
@@ -42,8 +41,9 @@ public class BaseSetup {
 		try {
 			environmentVariables = ReadYamlFiles.getInstance(filePath);
 		} catch (FileNotFoundException e) {
-			System.out.println("Failed for load environment context. Check possible file path errors");
-			throw new RuntimeException("Failed for Load environment context with message " + e.getMessage());
+			System.out
+					.println("Failed to load environment configurations. Check to make sure your directory is correct");
+			throw new RuntimeException("Failed to Load environment context with message " + e.getMessage());
 		}
 		logger = Logger.getLogger("logger_File");
 		PropertyConfigurator.configure(log4JPath);
@@ -57,31 +57,30 @@ public class BaseSetup {
 	public void setupBrowser() {
 		@SuppressWarnings("rawtypes")
 		/*
-		 * returns the key : value pair of our yml File object by using
-		 * getYamlProperty
+		 * returns the key : value pair of our yml File object by using getYamlProperty
 		 * method of environmentVariables
 		 */
 		HashMap uiProperties = environmentVariables.getYamlProperty("ui");
 		// printing the hashmap to console
 		System.out.println(uiProperties);
-		// Retrieving the key "url" and returning it a a String
+		// Retrieving the key value "url" and returning it as a String
 		// The url defined in the yml file is being referred
-		// by  url String object
+		// by the url String object
 		String url = uiProperties.get("url").toString();
 		// creating an instance of WebDriver
-		// using swtich statement to select the type of
+		// using switch statement to select the type of
 		// browser we will use for the automation
-		// the value of  browser set in yml file
-		//  will be executed if there is a corresponding case that matches its value.
+		// the value of browser set in yml file
+		// will be executed if there is a corresponding case that matches its value.
 		// if browser = Edge
 		// An Edge browser with a reference to WebDriver will be instantiated.
 		// We will create a case for each Browser class created
 		Browser browser;
 		switch (uiProperties.get("browser").toString().toLowerCase()) {
 		case "chrome":
-			if((boolean)uiProperties.get("headless")) {
+			if ((boolean) uiProperties.get("headless")) {
 				browser = new ChromeHeadless();
-			}else {
+			} else {
 				browser = new ChromeBrowser();
 			}
 			webDriver = browser.openBrowser(url);
@@ -97,20 +96,18 @@ public class BaseSetup {
 			break;
 		default:
 			throw new RuntimeException("Unknown Browser check environment properties");
-			}
-			webDriver.manage().window().maximize();
-			webDriver.manage().timeouts().implicitlyWait(Duration.of(20, ChronoUnit.SECONDS));
-			webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
 		}
+		webDriver.manage().window().maximize();
+		webDriver.manage().timeouts().implicitlyWait(Duration.of(20, ChronoUnit.SECONDS));
+		webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+	}
 
 	// method for quitting the WebDriver instance
 	// quits all browser instances
 	public void quitBrowser() {
-		if(webDriver != null)
+		if (webDriver != null)
 			webDriver.quit();
 	}
 
-
-	}
-
+}

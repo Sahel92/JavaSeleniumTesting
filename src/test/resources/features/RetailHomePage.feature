@@ -1,4 +1,4 @@
-@SmokeTest
+@RegressionTest
 Feature: Retail Home Page
 
   Background: 
@@ -14,7 +14,7 @@ Feature: Retail Home Page
     When User click on All section
     Then below options are present in Shop by Department sidebar
       | Electronics | Computers | Smart Home | Sports | Automative |
-
+@test
   Scenario Outline: Verify Department sidebar options
     When User click on All section
     And User on "<department>"
@@ -30,7 +30,7 @@ Feature: Retail Home Page
       | Automative  | Automative Parts & Accessories | MotorCycle & Powersports |
 
   Scenario: Verify User can add an item to cart
-    And User change the category to 'Smart Home'
+    When User change the category to 'Smart Home'
     And User search for an item 'Kasa outdoor smart plug'
     And User click on Search icon
     And User click on item
@@ -39,12 +39,12 @@ Feature: Retail Home Page
     Then the cart icon quantity should change to "2"
 
   Scenario: Verify User can place an order without Shipping address and payment Method on file
-    And User click on Cart option
+    When User click on Cart option
     And User click on Proceed to Checkout button
     And User click Add a new address link for shipping address
     And user fill new address form during checkout
-      | country | fullName | phoneNumber | streetAddress | apt | city        | state      | zipCode |
-      | Panama  | fullName |  1234567890 | 123 fake st   |   1 | Panama City | Los Santos | zipCode |
+      | country       | fullName | phoneNumber | address | apt | city | state | zipCode |
+      | United States | fullName | phoneNumber | address | apt | city | state | zipCode |
     And User click Add Your Address button
     And User click Add a credit card or Debit Card for Payment method
     And User fills debit or credit card information during checkout

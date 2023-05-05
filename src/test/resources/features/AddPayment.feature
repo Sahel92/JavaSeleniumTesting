@@ -1,4 +1,4 @@
-@SmokeTest
+@RegressionTest
 Feature: User can add  payment  method
 
   Background: 

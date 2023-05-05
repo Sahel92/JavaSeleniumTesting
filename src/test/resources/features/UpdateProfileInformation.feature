@@ -1,5 +1,5 @@
-@SmokeTest
-Feature: User wants to update profile
+@RegressionTest
+Feature: Testing funtionality to allow user to update personal information. 
 
   Background: 
     Given User is on retail website
@@ -12,12 +12,8 @@ Feature: User wants to update profile
     When User click on Account option
 
   Scenario Outline: Verify use can update profile information
-    And User update Name "<name>" and Phone "<phoneNum>"
+    When User update Name and Phone 
+    | name     | phoneNumber |
+    | fullName | phoneNumber |
     And user click on update button
     Then user profile information should be updated
-
-    Examples: 
-      | name    | phoneNum   |
-      | Ricky   | 2536380495 |
-      | Julian  | 2536369333 |
-      | Bubbles | 5336749763 |

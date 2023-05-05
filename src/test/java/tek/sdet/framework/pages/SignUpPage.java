@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import tek.sdet.framework.base.BaseSetup;
+
 /*
  * POM factory class for the sign up page (Account Creation)
  */
@@ -41,7 +42,6 @@ public WebElement signUpForm;
 
 @FindBy(xpath ="//label[text() = 'Confirm Password']")
 public WebElement confirmPasswordLabel;
-
 
 
 

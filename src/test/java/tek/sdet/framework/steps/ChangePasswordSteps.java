@@ -1,6 +1,6 @@
 package tek.sdet.framework.steps;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -14,31 +14,30 @@ public class ChangePasswordSteps extends CommonUtility {
 
 	@And("User enters {string} {string} {string}")
 	public void userEnters(String string, String string2, String string3) {
-	    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().previousPasswordInput));
-	    logger.info("Previous password text is present");
-	    sendText(factory.getRetailAccountPage().previousPasswordInput, string);
-	    sendText(factory.getRetailAccountPage().newPasswordInput, string2);
-	    sendText(factory.getSignUpPage().confirmPasswordInput, string3);
-	    logger.info("previous password is entered");
-	    logger.info("New password is entered");
-	    logger.info("Confirm password is entered");
-
+		assertTrue(isElementDisplayed(factory.getRetailAccountPage().previousPasswordInput));
+		logger.info("Previous password text is present");
+		sendText(factory.getRetailAccountPage().previousPasswordInput, string);
+		logger.info("previous password is entered");
+		sendText(factory.getRetailAccountPage().newPasswordInput, string2);
+		logger.info("New password is entered");
+		sendText(factory.getSignUpPage().confirmPasswordInput, string3);
+		logger.info("Confirm password is entered");
 
 	}
 
 	@When("User click on Change Password button")
 	public void user_click_on_change_password_button() {
-	    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().changePasswordBtn));
-	    click(factory.getRetailAccountPage().changePasswordBtn);
-	    logger.info("User has entered new password and clicked change password button");
+		assertTrue(isElementDisplayed(factory.getRetailAccountPage().changePasswordBtn));
+		click(factory.getRetailAccountPage().changePasswordBtn);
+		logger.info("User has entered new password and clicked change password button");
 	}
 
 	@Then("A message should be displayed {string}")
 	public void a_message_should_be_displayed(String string) {
-	    String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().passwordUpdatedSuccessfully));
-	    String expectedMessage = string;
-	    Assert.assertEquals(actualMessage, expectedMessage);
-	    logger.info("Password updated successfully");
+		String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().passwordUpdatedSuccessfully));
+		String expectedMessage = string;
+		assertEquals(actualMessage, expectedMessage);
+		logger.info("Password updated successfully");
 	}
 
 }

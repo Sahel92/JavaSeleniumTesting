@@ -3,7 +3,7 @@ package tek.sdet.framework.steps;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 
 
 import io.cucumber.datatable.DataTable;
@@ -22,11 +22,11 @@ public class SignInSteps extends CommonUtility {
 	public void userIsOnRetailWebsite() {
 		String actualTitle = getTitle();
 		String expectedTitle = "React App";
-		Assert.assertEquals(expectedTitle, actualTitle);
+		assertEquals(expectedTitle, actualTitle);
 		logger.info("Actual Title: " + actualTitle + " Expected Title: " + expectedTitle);
-		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().tekSchoolLogo));
+		assertTrue(isElementDisplayed(factory.getRetailHomePage().tekSchoolLogo));
 		logger.info("TEKSCHOOL logo is displayed on upper left of website");
-		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().signInLink));
+		assertTrue(isElementDisplayed(factory.getRetailHomePage().signInLink));
 		logger.info("Sign In option is displayed on upper right of website ");
 	}
 	
@@ -36,11 +36,11 @@ public class SignInSteps extends CommonUtility {
 		logger.info("User clicked on Sign in option");
 	}
 
-	// This method is used only for the SignIn Feature file
-	@And("User enters {string} and {string}")
+	
+	@When("User enters {string} and {string}")
 	public void userEntersAnd(String string, String string2) {
 
-		Assert.assertTrue(isElementDisplayed(factory.getRetailSignInPage().loginForm));
+		assertTrue(isElementDisplayed(factory.getRetailSignInPage().loginForm));
 		logger.info("Login form is displayed");
 		sendText(factory.getRetailSignInPage().emailField, string);
 		logger.info("Email field has been filled");
@@ -51,7 +51,7 @@ public class SignInSteps extends CommonUtility {
 	
 	@And("User clicks on login button")
 	public void userClicksOnLoginButton() {
-		Assert.assertTrue(isElementDisplayed(factory.getRetailSignInPage().loginBtn));
+		assertTrue(isElementDisplayed(factory.getRetailSignInPage().loginBtn));
 		logger.info("Login button is displayed");
 		click(factory.getRetailSignInPage().loginBtn);
 		logger.info("User clicked login button");
@@ -59,8 +59,8 @@ public class SignInSteps extends CommonUtility {
 	
 	@Then("User should be logged into their account")
 	public void userShouldBeLoggedInToTheirAccount() {
-		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().logoutBtn));
-		Assert.assertTrue(isElementDisplayed(factory.getRetailHomePage().orderLink));
+		assertTrue(isElementDisplayed(factory.getRetailHomePage().logoutBtn));
+		assertTrue(isElementDisplayed(factory.getRetailHomePage().orderLink));
 		logger.info("Log out button is present");
 		logger.info("Orders link is displayed at the top of page");
 	}
@@ -68,9 +68,7 @@ public class SignInSteps extends CommonUtility {
 	
 	/*
 	 * This method used in feature files that require being logged into an account
-	 * even if i run the password update test I can still use this method for other
-	 * feature files that will require us to login, by logging in with a set pair of
-	 * values that will not be changing.
+	 * I put it here, because it is relevant for login functionality.
 	 */
 	
 	@When("User enters following login credentials")

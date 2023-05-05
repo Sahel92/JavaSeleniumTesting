@@ -108,10 +108,6 @@ public class RetailAccountPage extends BaseSetup {
 
 	// End buttons
 
-	/*
-	 * wallet webelements cards on file list
-	 */
-
 	@FindBy(className = "account__payments-wrapper")
 	public WebElement cardsOnAccount;
 

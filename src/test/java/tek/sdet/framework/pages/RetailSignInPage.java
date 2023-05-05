@@ -36,7 +36,7 @@ public class RetailSignInPage extends BaseSetup {
 @FindBy(className = "login__title")
 public WebElement loginTitle;
 /*
- * login form portion form email field to login btn
+ * for test to check if login form is present
  */
 @FindBy(id = "loginForm")
 public WebElement loginForm;

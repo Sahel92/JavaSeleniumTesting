@@ -30,9 +30,9 @@ public class RetailOrderPage extends BaseSetup{
 	public WebElement reasonInput;
 	
 	@FindBy(css = "#orderSubmitBtn")
-	public WebElement cancelOrder;
+	public WebElement cancelOrderBtn;
 	
-	@FindBy(xpath ="//p[contains(text(),'Your Order Has Been Cancelled')]")//button[@class = 'order__cancel-submit']
+	@FindBy(xpath ="//p[contains(text(),'Your Order Has Been Cancelled')]")
 	public WebElement cancelText;
 	
 	@FindBy(css = "#dropOffInput")
@@ -59,8 +59,8 @@ public class RetailOrderPage extends BaseSetup{
 	@FindBy(xpath = "//p[@class = 'order__header-btn']")
 	public List<WebElement> showDetailsBtn;
 	
-	@FindBy(xpath = "//p[contains(text(), 'Show Details')]")
-	public WebElement detailsBtn;
+//	@FindBy(xpath = "//p[contains(text(), 'Show Details')]")
+//	public WebElement detailsBtn;
 	
 	@FindBy(css = "#cancelBtn")
 	public List<WebElement> cancelBtns;

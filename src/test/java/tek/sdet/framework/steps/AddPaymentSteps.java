@@ -3,7 +3,7 @@ package tek.sdet.framework.steps;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -19,7 +19,7 @@ public class AddPaymentSteps extends CommonUtility  {
 
 @When("User click on Add a payment method link")
 public void userClickOnAddAPaymentMethodLink() {
-    Assert.assertTrue(isElementDisplayed(factory.getRetailAccountPage().addPaymentLink));
+    assertTrue(isElementDisplayed(factory.getRetailAccountPage().addPaymentLink));
     logger.info("Add a payment link is displayed");
     click(factory.getRetailAccountPage().addPaymentLink);
     logger.info("User clicked on add a payment link");
@@ -30,8 +30,8 @@ public void userFillsDebitOrCreditCardInformation(DataTable dataTable) {
     List<Map<String, String>> cardInfo = dataTable.asMaps(String.class, String.class);
     sendText(factory.getRetailAccountPage().cardNumberInput,DataGeneratorUtility.data(cardInfo.get(0).get("cardNumber")));
     sendText(factory.getRetailAccountPage().nameOnCardInput, DataGeneratorUtility.data(cardInfo.get(0).get("nameOnCard")));
-    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
     selectByValue(factory.getRetailAccountPage().expirationYearInput, cardInfo.get(0).get("expirationYear"));
+    selectByValue(factory.getRetailAccountPage().expirationMonthInput, cardInfo.get(0).get("expirationMonth"));
     clearTextUsingSendKeys(factory.getRetailAccountPage().securityCodeInput);
     sendText(factory.getRetailAccountPage().securityCodeInput, DataGeneratorUtility.data(cardInfo.get(0).get("securityCode")));
     logger.info("User has filled out the add debit or credit card form.");
@@ -47,7 +47,7 @@ public void userClickOnAddYourCardButton() {
 public void aMessageShouldBeDisplayed(String string) {
     String actualMessage = getText(waitTillPresence(factory.getRetailAccountPage().paymentAddedSuccess));
     String expectedMessage = string;
-    Assert.assertEquals(expectedMessage, actualMessage);
+    assertEquals(expectedMessage, actualMessage);
     logger.info("Actual:" + actualMessage + " matches Expected " + expectedMessage );
 }
 

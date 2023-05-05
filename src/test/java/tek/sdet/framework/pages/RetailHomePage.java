@@ -14,14 +14,7 @@ public class RetailHomePage extends BaseSetup {
 		PageFactory.initElements(getDriver(), this);
 	}
 
-	/*
-	 * Access modifier public because we will use POMFactory constructor to
-	 * instantiate single instance of this class. With public modifier can use this
-	 * webElement in many different test cases For example if testing the
-	 * RetailSignInPage and if I want to verify that that the signInBtn is present I
-	 * can use the bellow element without having to create the same method in a
-	 * different POM class. Thank You ENCAPSULATION!!!
-	 */
+	
 
 	@FindBy(id = "signinLink")
 	public WebElement signInLink;
@@ -104,8 +97,9 @@ public class RetailHomePage extends BaseSetup {
 	@FindBy(xpath = "//p[contains(text(),'Order Placed, Thanks')]")
 	public WebElement orderPlaced;
 
-//@FindBy(xpath = "//div[contains(text(),'You have a card with this number. please use anoth')]")
 
 	@FindBy(xpath = "//button[@id='paymentSubmitBtn']")
 	public WebElement AddCardBtn;
 }
+
+//@FindBy(xpath = "//div[contains(text(),'You have a card with this number. please use anoth')]")

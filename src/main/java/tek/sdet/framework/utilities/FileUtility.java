@@ -7,13 +7,13 @@ import java.io.FileNotFoundException;
 public class FileUtility {
 
 
-	/*
-	 * this method of the file utility class
-	 * will return the FileInputStream of a File object
+	/**
+	 * this method of the FileUtility class
+	 * will return the FileInputStream of a File object, referred by filePath
 	 * which opens the connection to that file
 	 * so we can use it's properties
-	 * takes one parameter String filePath
-	 * returns an Instance of the filePath
+	 * @param
+	 * @returns new FileInputStream(new File(filepath))
 	 */
 	public static FileInputStream getFileInputStream(String filePath) throws FileNotFoundException {
 

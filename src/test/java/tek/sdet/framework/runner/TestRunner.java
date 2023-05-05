@@ -8,17 +8,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-		tags = "@SmokeTest",
-		features = ("classpath:features"),
-		glue = "tek.sdet.framework",
-		dryRun = false,
-		plugin = { "pretty",
-		"html:target/htmlReports/cucumber-pretty.html",
-		"json:target/jsonReports/cucumber.json" },
-		snippets = CAMELCASE,
-		monochrome = true
-		)
+@CucumberOptions(tags = "@RegressionTest", features = ("classpath:features"), glue = "tek.sdet.framework", dryRun = false, plugin = {
+		"pretty", "html:target/htmlReports/cucumber-pretty.html",
+		"json:target/jsonReports/cucumber.json" }, snippets = CAMELCASE, monochrome = false)
 
 public class TestRunner {
 
@@ -28,5 +20,3 @@ public class TestRunner {
 	 * and feature files. Uses the JUnit runner class to run said files.
 	 */
 }
-
-

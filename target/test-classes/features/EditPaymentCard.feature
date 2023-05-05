@@ -1,4 +1,4 @@
-@SmokeTest
+@RegressionTest
 Feature: User able to edit their debit/credit information.
 
   Background: 
@@ -14,11 +14,12 @@ Feature: User able to edit their debit/credit information.
   Scenario: Verify user can edit debit or credit card
     When User clicks on Edit option of card section
     And User edits card information
-      | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 9876889098098908 | Tryndamere |               3 |           2026 |          321 |
+      | cardNumber | nameOnCard | expirationMonth | expirationYear | securityCode |
+      | cardNumber | fullName   |              12 |           2026 | ccv          |
     And User clicks on Update Your Card button
     Then Update successfull message should be displayed 'Payment Method updated Successfully'
 
+
   Scenario: Verify user can remove their debit/credit card
-    And User click on remove option of card section
+    When User click on remove option of card section
     Then payment details should be removed
