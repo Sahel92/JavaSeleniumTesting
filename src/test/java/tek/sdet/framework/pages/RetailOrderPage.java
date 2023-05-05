@@ -38,7 +38,7 @@ public class RetailOrderPage extends BaseSetup{
 	@FindBy(css = "#dropOffInput")
 	public WebElement dropOffInput;
 	
-	@FindBy(className = "order__cancel-submit")
+	@FindBy(id = "orderSubmitBtn")
 	public WebElement returnOrderBtn;
 	
 	@FindBy(xpath = "//p[contains(text(),'Return was successfull')]")
@@ -64,4 +64,7 @@ public class RetailOrderPage extends BaseSetup{
 	
 	@FindBy(css = "#cancelBtn")
 	public List<WebElement> cancelBtns;
+	
+	@FindBy(xpath = "//input[@type = 'checkbox']")
+	public WebElement checkBox;
 }

@@ -18,6 +18,7 @@ Feature: Retail Order Page functionalities. User can review, cancel, or return a
     And User click on Cancel Order button
     Then A message should be displayed for canceled order "Your Order Has Been Cancelled"
 
+
   Scenario: Verify User can Return the order
     When User click on first order in list
     And User click on Return Items button

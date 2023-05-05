@@ -77,6 +77,9 @@ public class RetailOrderPageSteps extends CommonUtility {
 
 	@And("User click on Return Order button")
 	public void userClickOnReturnOrderButton() {
+		if(!(isElementSelected(factory.getRetailOrderPage().checkBox))){
+			click(factory.getRetailOrderPage().checkBox);
+		}
 		click(factory.getRetailOrderPage().returnOrderBtn);
 		logger.info("User clicked \"Return Order\" button");
 	}
