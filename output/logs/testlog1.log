@@ -43469,3 +43469,164 @@ Session ID: 5b737c004d2bd64bac9a0e6d015905d3
 2023-05-05 13:43:47,313 [main] INFO logger_File - New phone number has been entered
 2023-05-05 13:43:47,321 [main] INFO logger_File - Update button is displayed
 2023-05-05 13:43:48,175 [main] INFO logger_File - Update success message displayed
+2023-05-05 14:39:30,871 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:30,937 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:30,950 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:30,993 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:31,053 [main] INFO logger_File - Sign up form is displayed
+2023-05-05 14:39:31,063 [main] INFO logger_File - Email label is displayed
+2023-05-05 14:39:31,074 [main] INFO logger_File - Confirm password label is displayed
+2023-05-05 14:39:31,364 [main] INFO logger_File - User has filled out the sign up form
+2023-05-05 14:39:31,467 [main] INFO logger_File - Sign Up button is enabled
+2023-05-05 14:39:31,506 [main] INFO logger_File - User clicked Sign Up button
+2023-05-05 14:39:31,898 [main] INFO logger_File - User is logged into Account
+2023-05-05 14:39:34,674 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:34,689 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:34,704 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:34,741 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:34,844 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:39:34,872 [main] INFO logger_File - User clicked login button
+2023-05-05 14:39:35,204 [main] INFO logger_File - Log out button is present
+2023-05-05 14:39:35,204 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:39:35,269 [main] INFO logger_File - Account link is present
+2023-05-05 14:39:35,269 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:39:35,289 [main] INFO logger_File - Add a payment link is displayed
+2023-05-05 14:39:35,316 [main] INFO logger_File - User clicked on add a payment link
+2023-05-05 14:39:35,523 [main] INFO logger_File - User has filled out the add debit or credit card form.
+2023-05-05 14:39:35,621 [main] INFO logger_File - User clicked on Add Your card button
+2023-05-05 14:39:36,402 [main] INFO logger_File - Actual:Payment Method added sucessfully matches Expected Payment Method added sucessfully
+2023-05-05 14:39:39,008 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:39,019 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:39,029 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:39,064 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:39,160 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:39:39,187 [main] INFO logger_File - User clicked login button
+2023-05-05 14:39:39,516 [main] INFO logger_File - Log out button is present
+2023-05-05 14:39:39,516 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:39:39,703 [main] INFO logger_File - Account link is present
+2023-05-05 14:39:39,703 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:39:39,748 [main] INFO logger_File - User clicked on Add Address
+2023-05-05 14:39:40,133 [main] INFO logger_File - User has filled the address form
+2023-05-05 14:39:40,172 [main] INFO logger_File - user clicked on Add Your Address button
+2023-05-05 14:39:40,968 [main] INFO logger_File - Actual:Address Added Successfully matches Expected Address Added Successfully
+2023-05-05 14:39:43,494 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:43,507 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:43,518 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:43,549 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:43,648 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:39:43,676 [main] INFO logger_File - User clicked login button
+2023-05-05 14:39:44,058 [main] INFO logger_File - Log out button is present
+2023-05-05 14:39:44,058 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:39:44,115 [main] INFO logger_File - Account link is present
+2023-05-05 14:39:44,115 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:39:44,409 [main] INFO logger_File - User clicked on Edit button for the address
+2023-05-05 14:39:44,838 [main] INFO logger_File - User has updated their address with new information successfully.
+2023-05-05 14:39:44,872 [main] INFO logger_File - User clicked on "Update Your Address" btn
+2023-05-05 14:39:48,158 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:48,172 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:48,183 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:48,216 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:48,338 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:39:48,384 [main] INFO logger_File - User clicked login button
+2023-05-05 14:39:48,742 [main] INFO logger_File - Log out button is present
+2023-05-05 14:39:48,742 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:39:48,799 [main] INFO logger_File - Account link is present
+2023-05-05 14:39:48,799 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:39:49,092 [main] INFO logger_File - User clicked on remove button for their second address
+2023-05-05 14:39:49,107 [main] INFO logger_File - Users second address has been removed
+2023-05-05 14:39:54,898 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:39:54,917 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:39:54,932 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:39:55,002 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:39:55,141 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:39:55,172 [main] INFO logger_File - User clicked login button
+2023-05-05 14:39:55,572 [main] INFO logger_File - Log out button is present
+2023-05-05 14:39:55,572 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:39:55,658 [main] INFO logger_File - Account link is present
+2023-05-05 14:39:55,659 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:39:56,391 [main] INFO logger_File - User opened Card options. Edit card form displayed
+2023-05-05 14:39:56,477 [main] INFO logger_File - User clicked on edit button
+2023-05-05 14:39:56,816 [main] INFO logger_File - User has edited and updated their payment method
+2023-05-05 14:39:56,832 [main] INFO logger_File - Update Your Card button is enabled
+2023-05-05 14:39:56,892 [main] INFO logger_File - User clicked update card button
+2023-05-05 14:39:57,682 [main] INFO logger_File - Expected message: Payment Method updated Successfully Actual message: Payment Method updated Successfully
+2023-05-05 14:40:00,420 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:00,432 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:00,441 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:00,476 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:00,569 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:00,595 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:00,988 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:00,988 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:01,042 [main] INFO logger_File - Account link is present
+2023-05-05 14:40:01,042 [main] INFO logger_File - User clicked on Account link
+2023-05-05 14:40:01,377 [main] INFO logger_File - User clicked on remove option of card section
+2023-05-05 14:40:01,395 [main] INFO logger_File - Payment Card removed successfully from account.
+2023-05-05 14:40:03,579 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:03,590 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:03,599 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:03,641 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:03,737 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:03,763 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:04,099 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:04,099 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:04,135 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:04,156 [main] INFO logger_File - span is equal to Electronics
+2023-05-05 14:40:06,213 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:06,229 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:06,241 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:06,275 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:06,371 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:06,397 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:06,791 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:06,791 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:06,872 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:06,934 [main] INFO logger_File - TV & Video is present
+2023-05-05 14:40:09,329 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:09,339 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:09,348 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:09,380 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:09,471 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:09,496 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:09,837 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:09,838 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:09,875 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:09,929 [main] INFO logger_File - Accessories is present
+2023-05-05 14:40:11,995 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:12,007 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:12,017 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:12,049 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:12,141 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:12,169 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:12,511 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:12,511 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:12,547 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:12,606 [main] INFO logger_File - Smart Home Lightning is present
+2023-05-05 14:40:14,829 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:14,839 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:14,849 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:14,881 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:14,975 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:15,001 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:15,384 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:15,384 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:15,426 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:15,487 [main] INFO logger_File - Athletic Clothing is present
+2023-05-05 14:40:18,027 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:18,040 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:18,053 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:18,085 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:18,179 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:18,205 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:18,533 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:18,534 [main] INFO logger_File - Orders link is displayed at the top of page
+2023-05-05 14:40:18,567 [main] INFO logger_File - User clicked on all buton
+2023-05-05 14:40:18,639 [main] INFO logger_File - Automative Parts & Accessories is present
+2023-05-05 14:40:20,920 [main] INFO logger_File - Actual Title: React App Expected Title: React App
+2023-05-05 14:40:20,931 [main] INFO logger_File - TEKSCHOOL logo is displayed on upper left of website
+2023-05-05 14:40:20,941 [main] INFO logger_File - Sign In option is displayed on upper right of website 
+2023-05-05 14:40:20,973 [main] INFO logger_File - User clicked on Sign in option
+2023-05-05 14:40:21,066 [main] INFO logger_File - Login button is displayed
+2023-05-05 14:40:21,090 [main] INFO logger_File - User clicked login button
+2023-05-05 14:40:21,474 [main] INFO logger_File - Log out button is present
+2023-05-05 14:40:21,474 [main] INFO logger_File - Orders link is displayed at the top of page

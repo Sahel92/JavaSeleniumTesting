@@ -14,7 +14,7 @@ Feature: Retail Home Page
     When User click on All section
     Then below options are present in Shop by Department sidebar
       | Electronics | Computers | Smart Home | Sports | Automative |
-@test
+
   Scenario Outline: Verify Department sidebar options
     When User click on All section
     And User on "<department>"
