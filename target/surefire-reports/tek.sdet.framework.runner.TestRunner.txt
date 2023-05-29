@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tek.sdet.framework.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 113.38 s - in tek.sdet.framework.runner.TestRunner
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 155.397 s - in tek.sdet.framework.runner.TestRunner

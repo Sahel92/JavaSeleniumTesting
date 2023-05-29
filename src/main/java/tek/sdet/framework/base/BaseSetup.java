@@ -56,25 +56,13 @@ public class BaseSetup {
 
 	public void setupBrowser() {
 		@SuppressWarnings("rawtypes")
-		/*
-		 * returns the key : value pair of our yml File object by using getYamlProperty
-		 * method of environmentVariables
-		 */
+
 		HashMap uiProperties = environmentVariables.getYamlProperty("ui");
-		// printing the hashmap to console
+
 		System.out.println(uiProperties);
-		// Retrieving the key value "url" and returning it as a String
-		// The url defined in the yml file is being referred
-		// by the url String object
+
 		String url = uiProperties.get("url").toString();
-		// creating an instance of WebDriver
-		// using switch statement to select the type of
-		// browser we will use for the automation
-		// the value of browser set in yml file
-		// will be executed if there is a corresponding case that matches its value.
-		// if browser = Edge
-		// An Edge browser with a reference to WebDriver will be instantiated.
-		// We will create a case for each Browser class created
+
 		Browser browser;
 		switch (uiProperties.get("browser").toString().toLowerCase()) {
 		case "chrome":
@@ -103,8 +91,6 @@ public class BaseSetup {
 
 	}
 
-	// method for quitting the WebDriver instance
-	// quits all browser instances
 	public void quitBrowser() {
 		if (webDriver != null)
 			webDriver.quit();

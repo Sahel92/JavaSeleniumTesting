@@ -38,7 +38,10 @@ public class ReadYamlFiles {
 	 * 
 	 * The filepath passed is defined in BaseSetup class constructor.
 	 * 
-	 * @param String filepath
+	 * @param String filepath /** This method returns a new instance of
+	 *               ReadYamlFiles, if the field variable (readYamlFile) is null.
+	 *               Otherwise if readYamlFile != null, it will return the current
+	 *               instance of readYamlFiles
 	 */
 
 	private ReadYamlFiles(String filePath) throws FileNotFoundException {
@@ -48,11 +51,6 @@ public class ReadYamlFiles {
 		this.propertyMap = yaml.load(fileInputStream);
 	}
 
-	/**
-	 * This method returns a new instance of ReadYamlFiles, if the field variable
-	 * (readYamlFile) is null. Otherwise if readYamlFile != null, it will return the
-	 * current instance of readYamlFiles
-	 */
 	public static ReadYamlFiles getInstance(String filePath) throws FileNotFoundException {
 		if (readYamlFiles == null)
 			return new ReadYamlFiles(filePath);

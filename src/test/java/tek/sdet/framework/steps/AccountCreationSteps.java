@@ -1,10 +1,10 @@
 
 package tek.sdet.framework.steps;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -27,7 +27,6 @@ public class AccountCreationSteps extends CommonUtility {
 		logger.info("Email label is displayed");
 		assertTrue(isElementDisplayed(factory.getSignUpPage().confirmPasswordLabel));
 		logger.info("Confirm password label is displayed");
-
 	}
 
 	@And("User fills the signUp form with below data")

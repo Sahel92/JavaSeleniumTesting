@@ -1,0 +1,151 @@
+[33mcommit 82d555b723e4353c5f761ccd025424acf8022196[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 1b87672 ae69471
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Fri May 5 15:02:10 2023 -0700
+
+    Merge branch 'main' of https://github.com/Sahel92/TekTransformersAutomation
+
+[33mcommit 1b876723db611fe1bd208bf541fc55d40d420aa5[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Fri May 5 15:00:09 2023 -0700
+
+    fixedIssue
+
+[33mcommit 83126036245dec2d8f87d0c709c4e0fb7c4de854[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Fri May 5 14:41:14 2023 -0700
+
+    bug
+
+[33mcommit ae694711a8d3e48244c2e3ac65dac059144a4e9b[m
+Author: Sahel92 <125098911+Sahel92@users.noreply.github.com>
+Date:   Fri May 5 14:18:16 2023 -0700
+
+    Update README.md
+
+[33mcommit 55afa9ee512fb8f6fb97091f137ffc31a7d963c0[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Fri May 5 13:50:12 2023 -0700
+
+    Fixed Issues
+
+[33mcommit 8f13b4349047424aa7b2ffb80a07e13497c498af[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Thu Mar 9 17:41:39 2023 -0800
+
+    HeadLessTestFixedIssues
+
+[33mcommit 4917d74f62c07a2fb3521bf6f9a3e37f2858682d[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Wed Mar 1 21:50:05 2023 -0800
+
+    HeadLessRegression
+
+[33mcommit 3cba7ca9cdd561c9650ef991420fee220959dc0a[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Wed Mar 1 21:48:03 2023 -0800
+
+    FixedIssuesRegressionTest
+
+[33mcommit 10a84a35f18cc4d9ac283eaf48d818ea3a324ca6[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Tue Feb 28 20:46:08 2023 -0800
+
+    FixedIssuesForRegressionTest
+
+[33mcommit 6334fa7ee4ee3bf02d09f4e7a96064640e64eb4c[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Tue Feb 28 20:08:16 2023 -0800
+
+    RegressionTestsLatestBuild
+
+[33mcommit b115ed7f3e723591e6775bd8a3d16176bcefd8b3[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Tue Feb 28 17:17:13 2023 -0800
+
+    Healess Regression Test
+
+[33mcommit 02b7ce79c251588fcd5534add6e1bc37223402fc[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Mon Feb 27 23:52:24 2023 -0800
+
+    Headless Test RetailHome RetailOrder
+
+[33mcommit 96e1acb0ac743af64979f9327463aa3ae9bdd7ae[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Sun Feb 26 21:19:48 2023 -0800
+
+    RegressionTests
+
+[33mcommit 3371227c0019f2d4b64ae60e123967985caf3722[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Sun Feb 26 21:06:03 2023 -0800
+
+    CheckoutRegressionTests
+
+[33mcommit 271c1eae1ff6bbb1f19cc798885562341bcd67f5[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Sun Feb 26 21:02:29 2023 -0800
+
+    CheckOutRegressionTests
+
+[33mcommit c487ed2c73207642305ca1fbc6c070a5ed515636[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Sat Feb 25 03:19:31 2023 -0800
+
+    Payment@CheckOutTest
+
+[33mcommit 34a137369dbbee5328c355353e129d30949ae794[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Thu Feb 23 17:51:57 2023 -0800
+
+    SidebarTest
+
+[33mcommit 439d7fcf91e0d02390fbfad0169b359a65d48000[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Thu Feb 23 15:12:55 2023 -0800
+
+    first commit
+
+[33mcommit 861924b3047338fd7af084a6bb801621c45c58b1[m
+Merge: 7d2432f 871e68b
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Thu Feb 23 15:09:22 2023 -0800
+
+    Merge branch 'main' of https://github.com/Sahel92/TekTransformersAutomation
+
+[33mcommit 7d2432ffe4f628044eeb386aba4a13e0f54124a3[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Thu Feb 23 15:08:49 2023 -0800
+
+    EditAddressTest
+
+[33mcommit 871e68b208fc4d6b82c748b6e4e0d2b19d6da0fc[m
+Author: Sahel92 <125098911+Sahel92@users.noreply.github.com>
+Date:   Wed Feb 22 21:57:10 2023 -0800
+
+    Update README.md
+
+[33mcommit a7a2414de07472e0ce77414423abd21152d0357e[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Wed Feb 22 21:52:40 2023 -0800
+
+    regression
+
+[33mcommit 702c9f48017c39cb628d68628d9017a15f601675[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Wed Feb 22 19:34:55 2023 -0800
+
+    CardRemove Test Pass
+
+[33mcommit 1a020d67e76fc0cddd82a97104fb7815c396534c[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Mon Feb 20 22:28:16 2023 -0800
+
+    test
+
+[33mcommit 0ca82c45f59e5bec9ba5ab176bba9c4970c8611b[m
+Author: Sahel92 <M.Sahel.Sadiq0526@outlook.com>
+Date:   Mon Feb 20 22:27:05 2023 -0800
+
+    first commit
