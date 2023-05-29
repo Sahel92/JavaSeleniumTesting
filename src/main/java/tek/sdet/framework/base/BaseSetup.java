@@ -5,8 +5,8 @@ import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;
 
 import tek.sdet.framework.config.Browser;
@@ -36,7 +36,7 @@ public class BaseSetup {
 	 */
 	public BaseSetup() {
 		String filePath = System.getProperty("user.dir") + "/src/main/resources/env_config.yml";
-		String log4JPath = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
+		String log4JPath = System.getProperty("user.dir") + "/src/main/resources/log4j.xml";
 
 		try {
 			environmentVariables = ReadYamlFiles.getInstance(filePath);
@@ -45,8 +45,8 @@ public class BaseSetup {
 					.println("Failed to load environment configurations. Check to make sure your directory is correct");
 			throw new RuntimeException("Failed to Load environment context with message " + e.getMessage());
 		}
-		logger = Logger.getLogger("logger_File");
-		PropertyConfigurator.configure(log4JPath);
+		logger = (Logger) LogManager.getLogger("logger_File");
+		System.setProperty("log4j.configurationFile", log4JPath);
 	}
 
 	// returns an instance reference to WebDriver

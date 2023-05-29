@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%5p [%t] (%F:%L) - %m%n"/>
+        </Console>
+        <RollingFile name="R" fileName="./output/logs/testlog.log" filePattern="./output/logs/testlog-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d - %c - %p - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+        <RollingFile name="TTCC" fileName="./output/logs/testlog1.log" filePattern="./output/logs/testlog1-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d - %c - %p - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+        <File name="HTML" fileName="./output/logs/application.html">
+            <HTMLLayout title="Application log" locationInfo="true"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="R"/>
+            <AppenderRef ref="TTCC"/>
+            <AppenderRef ref="HTML"/>
+        </Root>
+    </Loggers>
+</Configuration>
