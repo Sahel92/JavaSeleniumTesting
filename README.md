@@ -1,44 +1,27 @@
-This is a BDD Framework utilizing Java, Selenium, and Cucumber. 
-This application automates the testing of an e-commerce web application. 
-I have the testing environment configured in the yml file.
-The tests will be done on headless Chrome Browser. 
-We have implemented log4J to log and keep track of our test as they execute.
-I am utilizing the Page Object Model POM design pattern.
-The benefit of this design pattern is that for each webpage of a webapplication
-we can create a java class (POM class) that coresponds to that paricular page, and using the
-power of our Selenium WebDriver we can interact with the WebElements that are associated with 
-POM class. 
-For example the HomePage class will contain locators associated with with the home page of 
-the website.
-This allows us to change or update our locators for that specifc page much more readily and easily.
-Another benefit is that it allows for a cleaner organization. 
-To initzialize our POM classes, I have implemented the POMFactory class. In this class we create 
-a reference to our POM class using a singleton design pattern
-public class POMFactory extends BaseSetup{
 
-private SomePomClass somePomClass;
-
-public POMFactory(){
-return this.somePomClas = new SomePomClass();
-}
-
-public SomePomClass getSomePomClas(){
-return this.somePomClass;
-}
-
-when an object of POMFactory is created in the step defintions class
-the construcor of POMFactory will initialize an object of our POM class.
-
-When a new object of a POM class is created, inside of its constructor a static call is made  
-public class SomePomClas extends BaseSetup{
-
-public SomePomClass(){
-PageFactory.initElements(getDriver(), this);
-}
-
-This will make sure that all WebElement locators associated with this page are initialized, which 
-allows Selenium WebDriver to interact with the elements on a page. 
-
-A common utility class contians all of the common methods that will be used when interacting with webelements. 
-
-Still working to update my framework. 
+*    BDD Framework Development:
+        ◦ Developed a Behavior-Driven Development (BDD) framework using Java, Selenium, and Cucumber for automating tests on an e-commerce web application.
+    • Testing Environment Configuration:
+        ◦ Configured testing environments efficiently using YAML files, ensuring seamless execution of tests on a headless Chrome Browser.
+    • Logging and Tracking:
+        ◦ Implemented log4J to log and track test execution, providing comprehensive visibility into test progress and results.
+    • Page Object Model (POM) Design Pattern:
+        ◦ Utilized the Page Object Model (POM) design pattern for clean organization and easy maintenance of test scripts.
+        ◦ Implemented separate Java classes (POM classes) corresponding to specific web pages, allowing efficient interaction with associated WebElements.
+    • POM Factory Implementation:
+        ◦ Implemented the POMFactory class using a singleton design pattern for initializing POM classes.
+        ◦ Ensured ease of object creation and initialization of necessary PageFactory elements.
+    • Cucumber Integration:
+        ◦ Integrated Cucumber to create feature files outlining scenarios and scenario outlines based on user stories.
+        ◦ Developed step definition classes with JUnit for test case implementations specified in feature files.
+    • Test Execution and Reporting:
+        ◦ Utilized JUnit to run tests, generating detailed logs with validations at each test case.
+        ◦ Employed cucumber reports to generate interactive charts illustrating test step outcomes.
+        ◦ Captured screenshots during critical testing moments, enhancing data and feedback for testing teams and stakeholders.
+    • Jenkins Pipeline Configuration:
+        ◦ Configured a Jenkins pipeline for automated regression testing, triggered upon code changes in the GitHub repository.
+    • Comprehensive Automation Testing:
+        ◦ Applied the framework for end-to-end automation testing of an e-commerce application, covering user registration to product shipping.
+    • API and Database Testing:
+        ◦ Leveraged Postman and Karate frameworks for testing REST API endpoints, ensuring correct data transfer between front and back ends.
+        ◦ Conducted SQL-based database testing to validate data integrity across the application.
