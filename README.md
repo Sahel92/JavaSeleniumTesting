@@ -25,3 +25,35 @@
     • API and Database Testing:
         ◦ Leveraged Postman and Karate frameworks for testing REST API endpoints, ensuring correct data transfer between front and back ends.
         ◦ Conducted SQL-based database testing to validate data integrity across the application.
+
+[Headless Chrome]
+![bdd1png](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/86edd2e0-35c2-4b46-bd8d-7e322d19d689)
+
+[Browser Setup]   
+![bdd2](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/fc5e1925-caab-40f7-90ad-ca2d372ee527)
+
+[Common functions library]
+![bdd3](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/27b8ba8e-0cfc-4d58-bf25-db049ad0e037)
+
+[Data Generator]
+![datagen](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/475aaa9d-b2d8-4e9f-873a-2a866492d20c)
+
+[Test SetUp @CucumberHooks]
+![bdd4](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/1375b6ff-8f10-4f77-abb2-e8607658126d)
+
+[Test Runner Class @CucumberOptions]
+![bdd5](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/7c155fed-7aed-48ec-b917-e482ced1e382)
+
+[POM Page]
+![bdd6](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/74bb7846-24fe-4105-834d-c354dbef9362)
+
+[Factory Driver Class]
+![bdd7](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/2d2c7565-ca16-4373-b838-42f7881fcebe)
+
+[Step Definition]
+![bdd8](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/e3aaec9a-10e5-4533-a462-25136287faf2)
+
+[Scenario/Outline inside Feature file]
+![bdd9](https://github.com/Sahel92/JavaSeleniumTesting/assets/125098911/c69c9e04-cda2-4538-a504-eae7e189505b)
+
+
