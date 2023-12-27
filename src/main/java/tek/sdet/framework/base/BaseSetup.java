@@ -21,19 +21,7 @@ public class BaseSetup {
 	private final ReadYamlFiles environmentVariables;
 	public static Logger logger;
 
-	/*
-	 * BaseSetup constructor stores the path of the env_config and log4j files into
-	 * two separate String objects
-	 *
-	 * environmentVariables refers to the instance of the yaml File object
-	 * surrounded by try and catch with FileNotFoundException (unchecked exception
-	 * (runtime exception)) printing a message to console and throwing new
-	 * RuntimeException plus e.getMessage() for the throwable
-	 *
-	 * Outside of the try/catch block we are retrieving a logger named logger_file
-	 *
-	 * Finally the last method configures the properties of the log4JPath file
-	 */
+// Loads environment configurations
 	public BaseSetup() {
 		String filePath = System.getProperty("user.dir") + "/src/main/resources/env_config.yml";
 		String log4JPath = System.getProperty("user.dir") + "/src/main/resources/log4j.xml";
@@ -49,7 +37,7 @@ public class BaseSetup {
 		System.setProperty("log4j.configurationFile", log4JPath);
 	}
 
-	// returns an instance reference to WebDriver
+	
 	public WebDriver getDriver() {
 		return webDriver;
 	}
