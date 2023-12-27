@@ -14,9 +14,4 @@ import io.cucumber.junit.CucumberOptions;
 
 public class TestRunner {
 
-	/*
-	 * Runner class that acts as a link between our step definition class (glue) and
-	 * feature files (features). We provide the pathway for both the step def class
-	 * and feature files. Uses the JUnit runner class to run said files.
-	 */
 }
