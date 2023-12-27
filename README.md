@@ -1,8 +1,4 @@
 
-# Project Title
-
-A brief description of what this project does and who it's for
-
    BDD Framework Development:
         Developed a Behavior-Driven Development (BDD) framework using Java, Selenium, and Cucumber for automating tests on an e-commerce web application.
         
