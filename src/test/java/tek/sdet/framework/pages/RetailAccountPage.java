@@ -14,7 +14,7 @@ public class RetailAccountPage extends BaseSetup {
 		PageFactory.initElements(getDriver(), this);
 	}
 
-// Profile fields User able to edit (name, phoneNum, email, password)
+
 
 	@FindBy(id = "personalPhoneInput")
 	public WebElement phoneNumber;
@@ -27,9 +27,9 @@ public class RetailAccountPage extends BaseSetup {
 
 	@FindBy(id = "newPasswordInput")
 	public WebElement newPasswordInput;
-	// End of Your Profile fields
+	
 
-	// Identifiers to confirm User on correct page
+	
 	@FindBy(xpath = "//h1[text() = 'Your Profile']")
 	public WebElement yourProfileHeader;
 
@@ -38,9 +38,9 @@ public class RetailAccountPage extends BaseSetup {
 
 	@FindBy(xpath = "//h1[text() = 'Wallet']")
 	public WebElement walletHeader;
-	// End of Identifiers.
+	
 
-	// Confirmation messages when User adds/updates some form
+	
 	@FindBy(xpath = "//div[text() = 'Personal Information Updated Successfully']")
 	public WebElement updatedSuccessfully;
 
@@ -52,16 +52,14 @@ public class RetailAccountPage extends BaseSetup {
 
 	@FindBy(xpath = "//*[text() ='Payment Method updated Successfully']")
 	public WebElement paymentUpdatedText;
-	// End of Confirmation messages.
+	
 
-	/*
-	 * Clicking on this webElement will present the Card form.
-	 */
+	
 
 	@FindBy(xpath = "//p[text() = 'Add a payment method']")
 	public WebElement addPaymentLink;
 
-	// Fields for Card form
+
 	@FindBy(id = "cardNumberInput")
 	public WebElement cardNumberInput;
 
@@ -76,10 +74,7 @@ public class RetailAccountPage extends BaseSetup {
 
 	@FindBy(id = "securityCodeInput")
 	public WebElement securityCodeInput;
-	// End of Fields for Card form
-
-	// WebElements related to Buttons
-	// (update, change password, edit)
+	
 
 	@FindBy(id = "paymentSubmitBtn")
 	public WebElement paymentSubmitBtn;
@@ -102,21 +97,11 @@ public class RetailAccountPage extends BaseSetup {
 	@FindBy(xpath = "//div[@class='account__payment-selected account__payment-item']")
 	public WebElement firstSelectedCard;
 
-	// This element when clicked on will present the options to edit or remove card.
-//		@FindBy(className = "false account__payment-item")
-//		public WebElement cardOptions;
-
-	// End buttons
-
 	@FindBy(className = "account__payments-wrapper")
 	public WebElement cardsOnAccount;
 
 	@FindBy(xpath = "//img[@alt = 'Master Card']")
 	public WebElement bankCard;
-
-	/*
-	 * BELOW ARE LOCATORS FOR ADDRESS FEATURES
-	 */
 
 	@FindBy(xpath = "//p[contains(text() , 'Add Address')]")
 	public WebElement addAddress;
