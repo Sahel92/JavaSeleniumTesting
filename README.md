@@ -1,4 +1,3 @@
-
    BDD Framework Development:
         Developed a Behavior-Driven Development (BDD) framework using Java, Selenium, and Cucumber for automating tests on an e-commerce web application.
         
